@@ -145,16 +145,17 @@
             color: white;
         }
         
-        .card:nth-child(1) .card-icon {
-            background: #10b981;
+        /* FIX 1: Updated nth-child to match new content order: 1. Problem (Red), 2. Solution (Orange), 3. Path (Green) */
+        .card:nth-child(1) .card-icon { /* المشكلة - Problem */
+            background: #ef4444; /* Red */
         }
 
-        .card:nth-child(2) .card-icon {
-            background: #f59e0b;
+        .card:nth-child(2) .card-icon { /* الحل - Solution */
+            background: #f59e0b; /* Orange */
         }
 
-        .card:nth-child(3) .card-icon {
-            background: #ef4444;
+        .card:nth-child(3) .card-icon { /* الطريق - Path */
+            background: #10b981; /* Green */
         }
 
         .card h3 {
@@ -314,14 +315,15 @@
             font-size: 1.2rem;
         }
 
-        /* Golden Summary */
+        /* FIX 4: Color Unification for Golden Summary */
         .golden-summary {
-            background: linear-gradient(135deg, #fceb98 0%, #fde68a 100%);
+            background: #fef3c7; /* Clean, light yellow/gold */
             padding: 3rem;
             border-radius: 25px;
             margin: 3rem 0;
             text-align: center;
             box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
+            border: 2px solid #fde047; /* Add a slight border for definition */
         }
         
         .golden-summary h3,
@@ -422,15 +424,16 @@
             border-bottom: none;
         }
 
-        /* Golden Summary */
+        /* Golden Summary (AI Section) */
         .golden-summary.ai {
-            background: linear-gradient(135deg, #fceb98 0%, #fde68a 100%);
+            background: #fef3c7; /* FIX 4: Clean, light yellow/gold */
             color: #1f2937;
             padding: 3rem;
             border-radius: 25px;
             margin: 3rem 0;
             text-align: center;
             box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
+            border: 2px solid #fde047; /* Add a slight border for definition */
         }
 
         .golden-summary.ai h3, .golden-summary.ai p {
@@ -600,7 +603,7 @@
         }
 
         .step-icon.step1 {
-            background: #10b981;
+            background: #ef4444; /* Problem related - Red */
         }
 
         .step-icon.step2 {
@@ -910,9 +913,10 @@
                 padding: 2rem;
                 font-size: 1.1rem;
             }
-
+            
+            /* FIX 2: Increased container padding for better mobile spacing */
             .container {
-                padding: 0 1rem;
+                padding: 0 2rem; 
             }
         }
 
@@ -995,7 +999,7 @@
             <div class="hero-description">
                 حان الوقت لتفكيك النموذج القديم وبناء مسارك الخاص. هذا هو دليلك لاكتشاف قدراتك الحقيقية والمساهمة في المستقبل.
             </div>
-            <a href="#mainContentAnchor" class="cta-button">
+            <a href="#three-cards-section-anchor" class="cta-button">
                 <i class="fas fa-rocket"></i>
                 ابدأ رحلتك الآن
             </a>
@@ -1003,18 +1007,18 @@
     </section>
 
     <div class="main-content" id="mainContent">
-        <a id="mainContentAnchor"></a> <section class="three-cards-section">
+        <a id="three-cards-section-anchor"></a> <section class="three-cards-section">
             <div class="container">
                 <div class="three-cards">
-                    <div class="card">
+                    <div class="card fade-in">
                         <div class="card-icon">
-                            <i class="fas fa-route"></i>
+                            <i class="fas fa-exclamation-triangle"></i>
                         </div>
-                        <h3>الطريق</h3>
-                        <p>خطوات عملية لبناء مسارك الخاص وتطوير مهاراتك الفطرية في عالم متغير</p>
+                        <h3>المشكلة</h3>
+                        <p>النموذج التقليدي للتعليم والعمل لم يعد يعمل في عالم اليوم المتسارع</p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card fade-in">
                         <div class="card-icon">
                             <i class="fas fa-lightbulb"></i>
                         </div>
@@ -1022,12 +1026,12 @@
                         <p>إيقاظ المواهب الفطرية والتعلم الموجه ذاتياً كبديل للنظام التقليدي</p>
                     </div>
                     
-                    <div class="card">
+                    <div class="card fade-in">
                         <div class="card-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
+                            <i class="fas fa-route"></i>
                         </div>
-                        <h3>المشكلة</h3>
-                        <p>النموذج التقليدي للتعليم والعمل لم يعد يعمل في عالم اليوم المتسارع</p>
+                        <h3>الطريق</h3>
+                        <p>خطوات عملية لبناء مسارك الخاص وتطوير مهاراتك الفطرية في عالم متغير</p>
                     </div>
                 </div>
             </div>
@@ -1039,7 +1043,7 @@
                     <h2 class="section-title">وهم التعليم والصناعة</h2>
                 </div>
                 
-                <div class="why-not-working">
+                <div class="why-not-working fade-in">
                     <h4><i class="fas fa-exclamation-triangle"></i> لماذا لم يعد مسار الماضي يعمل؟</h4>
                     <p>النموذج الذي أنشأه روكفلر وروتشيلد كان مصمماً لإنتاج موظفين مطيعين للمصانع والشركات الكبيرة. هذا النظام القائم على "المدرسة > الجامعة > الوظيفة > التقاعد" لم يعد يلبي احتياجات العالم الحديث.</p>
                 </div>
@@ -1048,7 +1052,7 @@
                     <div class="comparison-section">
                         <h3 class="comparison-title">مقارنة النماذج</h3>
                         <div class="comparison-grid">
-                            <div class="comparison-column future">
+                            <div class="comparison-column future fade-in">
                                 <h4>النموذج المستقبلي</h4>
                                 <ul>
                                     <li>تعلم مخصص ومرن</li>
@@ -1058,7 +1062,7 @@
                                 </ul>
                             </div>
                             
-                            <div class="comparison-column traditional">
+                            <div class="comparison-column traditional fade-in">
                                 <h4>النموذج التقليدي</h4>
                                 <ul>
                                     <li>تعليم موحد وجامد</li>
@@ -1070,7 +1074,7 @@
                         </div>
                     </div>
                     
-                    <div class="education-golden-summary">
+                    <div class="education-golden-summary fade-in">
                         <h3>الأدلة على فشل النظام القديم</h3>
                         <p>ارتفاع معدلات البطالة، زيادة الاضطرابات النفسية، وانعدام الهدف في الحياة.</p>
                     </div>
@@ -1086,7 +1090,7 @@
                 </div>
                 
                 <div class="ai-grid">
-                    <div class="ai-column protected">
+                    <div class="ai-column protected fade-in">
                         <h4><i class="fas fa-shield-alt"></i> المهارات المحمية</h4>
                         <ul>
                             <li>• الإبداع والابتكار</li>
@@ -1097,7 +1101,7 @@
                         </ul>
                     </div>
                     
-                    <div class="ai-column threatened">
+                    <div class="ai-column threatened fade-in">
                         <h4><i class="fas fa-exclamation-triangle"></i> الوظائف المهددة</h4>
                         <ul>
                             <li>• الوظائف الروتينية والتكرارية</li>
@@ -1109,7 +1113,7 @@
                     </div>
                 </div>
                 
-                <div class="golden-summary">
+                <div class="golden-summary fade-in">
                     <h3>الخلاصة الذهبية</h3>
                     <p>المستقبل للذين يطورون مواهبهم الفطرية ويبنون مهاراتهم الشخصية. التغيير ليس خياراً بل ضرورة حتمية.</p>
                 </div>
@@ -1124,7 +1128,7 @@
                 </div>
                 
                 <div class="talents-grid">
-                    <div class="talents-column multiple">
+                    <div class="talents-column multiple fade-in">
                         <h4>الذكاءات المتعددة</h4>
                         <ul>
                             <li>• الذكاء اللغوي</li>
@@ -1138,7 +1142,7 @@
                         </ul>
                     </div>
                     
-                    <div class="talents-column classical">
+                    <div class="talents-column classical fade-in">
                         <h4>الذكاءات الكلاسيكية</h4>
                         <ul>
                             <li>• الذكاء اللغوي</li>
@@ -1148,7 +1152,7 @@
                     </div>
                 </div>
                 
-                <div class="sports-example">
+                <div class="sports-example fade-in">
                     <h4><i class="fas fa-futbol"></i> مثال من عالم الرياضة</h4>
                     <p>في كرة القدم، يتم اكتشاف المواهب في سن مبكرة وتطويرها بطريقة مكثفة ومتخصصة. لماذا لا نطبق نفس المبدأ في جميع مجالات الحياة؟</p>
                 </div>
@@ -1162,7 +1166,7 @@
                 </div>
                 
                 <div class="journey-steps">
-                    <div class="journey-step">
+                    <div class="journey-step fade-in">
                         <div class="step-number">1</div>
                         <div class="step-icon step1">
                             <i class="fas fa-search"></i>
@@ -1171,4 +1175,189 @@
                         <div class="step-content">
                             <div class="step-section">
                                 <h5>تدوين اليوميات</h5>
-                                <p>• اكتب انطباعاتك اليومية<br>• راقب أنماط اهتمام
+                                <p>• اكتب انطباعاتك اليومية<br>• راقب أنماط اهتمامك<br>• سجل إنجازاتك الصغيرة</p>
+                            </div>
+                            <div class="step-section">
+                                <h5>جرب ثم جرب</h5>
+                                <p>• جرب هوايات وأنشطة متنوعة<br>• اشترك في ورش مع الآخرين<br>• انتبه لما يثير شغفك<br>• لاحظ ما تتقنه بسهولة</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-step fade-in">
+                        <div class="step-number">2</div>
+                        <div class="step-icon step2">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>البدء العملي</h4>
+                        <div class="step-content">
+                            <div class="step-section">
+                                <h5>مشاريع صغيرة</h5>
+                                <p>• ابدأ بمشروع بسيط في مجال اهتمامك<br>• شارك أعمالك مع الآخرين<br>• تعلم من التجربة والخطأ</p>
+                            </div>
+                            <div class="step-section">
+                                <h5>التعلم بالممارسة</h5>
+                                <p>• ادرس من النماذج الناجحة<br>• ابحث عن مرشد أو مرشدة<br>• انضم لمجتمعات الممارسين</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-step fade-in">
+                        <div class="step-number">3</div>
+                        <div class="step-icon step3">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>التعامل مع الظروف</h4>
+                        <div class="step-content">
+                            <div class="highlight">ابدأ بالممكن والمتاح</div>
+                            <div class="step-section">
+                                <h5>القدرة على التكيف</h5>
+                                <p>• استغل الموارد المتاحة<br>• كن مبدعاً في الحلول<br>• لا تنتظر الظروف المثالية</p>
+                            </div>
+                            <div class="step-section">
+                                <h5>عقلية النمو</h5>
+                                <p>• كل يوم فرصة للتطوير<br>• الفشل درس وليس نهاية<br>• التحسن التدريجي المستمر</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="life-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">نحو حياة طيبة</h2>
+                    <p class="section-subtitle">البساطة والهدف في عالم معقد</p>
+                </div>
+                
+                <div class="life-grid">
+                    <div class="life-column positive fade-in">
+                        <h4><i class="fas fa-check-circle"></i> قواعد العيش البسيط</h4>
+                        <ul>
+                            <li>• فهم الأولويات والقيم</li>
+                            <li>• الحرية المالية</li>
+                            <li>• وقت أكثر لما يهم</li>
+                            <li>• تركيز على النمو الداخلي</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="life-column negative fade-in">
+                        <h4><i class="fas fa-times-circle"></i> ثقافة الاستهلاك المدمرة</h4>
+                        <ul>
+                            <li>• السعي وراء المظاهر</li>
+                            <li>• تعريف النجاح بالممتلكات</li>
+                            <li>• فقدان الهدف والمعنى</li>
+                            <li>• الدين والضغط المالي</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="golden-summary fade-in">
+                    <h3>النجاح الحقيقي</h3>
+                    <p>النجاح الحقيقي لا يُقاس بحجم البنك أو الممتلكات، بل بمدى توافق عملك مع قيمك الشخصية وإسهامك الإيجابي في العالم من حولك.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-section">
+            <div class="container">
+                <h2>بناء جيل يغير العالم</h2>
+                <p class="subtitle">مسؤولية جماعية تبدأ بخطوة فردية</p>
+                
+                <div class="section-header">
+                    <h3 class="section-title" style="color: white; font-size: 2rem;">دور المجتمع</h3>
+                </div>
+                
+                <div class="community-grid">
+                    <div class="community-item fade-in">
+                        <div class="community-icon">🏗️</div>
+                        <h4>صناع القرار</h4>
+                        <p>إعادة النظم التعليمية</p>
+                    </div>
+                    
+                    <div class="community-item fade-in">
+                        <div class="community-icon">👨‍🏫</div>
+                        <h4>المعلمون</h4>
+                        <p>تطبيق أساليب تعليمية متقدمة</p>
+                    </div>
+                    
+                    <div class="community-item fade-in">
+                        <div class="community-icon">👥</div>
+                        <h4>الآباء</h4>
+                        <p>دعم واكتشاف مواهب الأطفال</p>
+                    </div>
+                </div>
+                
+                <div class="quote-section fade-in">
+                    اسع يا عبدي وأنا أسعى معاك!
+                </div>
+                
+                <button class="final-cta-button" onclick="sharePage()">
+                    <i class="fas fa-share"></i>
+                    كن جزءاً من التغيير - شارك هذه الرؤية
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>التغيير يبدأ من هنا</h3>
+            <p>رحلة الألف ميل تبدأ بخطوة واحدة</p>
+            <p class="quote">"اسع يا عبدي وأنا أسعى معاك!"</p>
+            
+            <div class="social-links">
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // دالة المشاركة
+        async function sharePage() {
+            const shareData = {
+                title: 'نحو جيل يغير العالم',
+                text: 'اكتشف المواهب الفطرية واصنع مستقبلك الخاص!',
+                url: 'https://riseera47-spec.github.io/awaken-talents-/' // يرجى التأكد من أن هذا الرابط هو الصحيح
+            };
+
+            try {
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                } else {
+                    prompt('انسخ الرابط للمشاركة:', shareData.url);
+                }
+            } catch (err) {
+                console.log('فشل المشاركة', err);
+                prompt('انسخ الرابط للمشاركة:', shareData.url);
+            }
+        }
+
+        // Intersection Observer for animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            const elementsToAnimate = document.querySelectorAll('.fade-in');
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
