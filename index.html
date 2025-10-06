@@ -1,69 +1,1174 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="اكتشف مواهبك الفطرية وصمم مستقبلك بخطوات عملية نحو حياة طيبة مليئة بالإنجاز.">
-  <meta name="keywords" content="مواهب, ذكاء, حياة طيبة, تعليم, تغيير, مستقبل, تطوير الذات">
-  <meta name="author" content="RiseEra47">
-  <title>Awaken Talents | إيقاظ المواهب</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="اكتشف موهبتك الفطرية وابنِ مستقبلك في عالم يتغير بسرعة. انضم إلينا لرحلة نحو التعليم المستقبلي وريادة الأعمال.">
+    <meta name="keywords" content="تعليم, مواهب, ريادة أعمال, تطوير ذاتي, ذكاء اصطناعي, مستقبل التعليم, تعلم ذاتي">
+    <title>نحو جيل يغير العالم - إيقاظ المواهب الفطرية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="Awaken Talents | إيقاظ المواهب">
-  <meta property="og:description" content="اكتشف مواهبك الفطرية وصمم مستقبلك بخطوات عملية نحو حياة طيبة مليئة بالإنجاز.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://riseera47-spec.github.io/awaken-talents/">
-  <meta property="og:image" content="https://riseera47-spec.github.io/awaken-talents/preview.png">
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f4f8;
+        }
 
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; color: #333; }
-    header { background: linear-gradient(135deg,#4a90e2,#9013fe); color:#fff; padding:2rem 1rem; text-align:center; }
-    header h1 { margin:0; font-size:2.5rem; }
-    header p { font-size:1.2rem; margin:0.5rem 0 1rem; }
-    header .cta-btn { background:#ffdd57; color:#333; padding:0.7rem 1.5rem; border-radius:25px; font-weight:bold; text-decoration:none; }
-    section { padding:3rem 1rem; text-align:center; }
-    section h2 { font-size:2rem; margin-bottom:1rem; color:#4a90e2; }
-    section p { max-width:800px; margin:auto; }
-    .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; margin-top:2rem; }
-    .card { background:#fff; padding:1.5rem; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); transition:transform 0.2s; }
-    .card:hover { transform:translateY(-5px); }
-    .social-share { margin-top:2rem; }
-    .social-share a { margin:0 0.5rem; text-decoration:none; padding:0.5rem 1rem; border-radius:5px; color:#fff; }
-    .twitter { background:#1DA1F2; }
-    .whatsapp { background:#25D366; }
-    .linkedin { background:#0077B5; }
-    footer { background:#333; color:#fff; padding:1rem; text-align:center; }
-    @media(max-width:600px){ header h1{font-size:1.8rem;} section h2{font-size:1.5rem;} }
-  </style>
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #2e4a86 0%, #4a69ad 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        .hero-description {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.2);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 0;
+            background: #f0f4f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Three Cards Section */
+        .three-cards-section {
+            padding: 4rem 0;
+            background: #f0f4f8;
+        }
+
+        .three-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .card:nth-child(1) .card-icon {
+            background: #10b981;
+        }
+
+        .card:nth-child(2) .card-icon {
+            background: #f59e0b;
+        }
+
+        .card:nth-child(3) .card-icon {
+            background: #ef4444;
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .card p {
+            color: #4b5563;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 4rem 0 2rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2e4a86;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Education Section */
+        .education-section {
+            background: #e3f2fd;
+            padding: 4rem 0;
+            margin: 0;
+        }
+
+        .education-content {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .why-not-working {
+            background: #fef2f2;
+            border: 2px solid #fca5a5;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .why-not-working h4 {
+            color: #dc2626;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .why-not-working p {
+            color: #991b1b;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Comparison Table */
+        .comparison-section {
+            margin: 3rem 0;
+        }
+
+        .comparison-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 2rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-column {
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .comparison-column.future {
+            background: #d1fae5;
+            border: 2px solid #10b981;
+        }
+
+        .comparison-column.traditional {
+            background: #fee2e2;
+            border: 2px solid #ef4444;
+        }
+
+        .comparison-column h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .comparison-column.future h4 {
+            color: #065f46;
+        }
+
+        .comparison-column.traditional h4 {
+            color: #991b1b;
+        }
+
+        .comparison-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-column li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .comparison-column.future li::before {
+            content: "✓";
+            color: #059669;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .comparison-column.traditional li::before {
+            content: "✗";
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Golden Summary */
+        .golden-summary {
+            background: linear-gradient(135deg, #fceb98 0%, #fde68a 100%);
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
+        }
+        
+        .golden-summary h3,
+        .golden-summary p {
+            color: #4b5563; 
+        }
+        
+        .education-golden-summary {
+            background: #2e4a86;
+            color: white;
+            border: 2px solid #60a5fa;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(46, 74, 134, 0.15);
+        }
+
+        .golden-summary h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .golden-summary p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        
+        .education-golden-summary h3, .education-golden-summary p {
+             color: white;
+        }
+
+        /* AI Section */
+        .ai-section {
+            background: #ede9fe;
+            padding: 4rem 0;
+            margin: 0;
+        }
+
+        .ai-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .ai-column {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid;
+        }
+
+        .ai-column.protected {
+            border-top-color: #10b981;
+            background: #ecfdf5;
+        }
+
+        .ai-column.threatened {
+            border-top-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .ai-column h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .ai-column.protected h4 {
+            color: #065f46;
+        }
+
+        .ai-column.threatened h4 {
+            color: #991b1b;
+        }
+
+        .ai-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ai-column li {
+            padding: 0.8rem 0;
+            color: #374151;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .ai-column li:last-child {
+            border-bottom: none;
+        }
+
+        /* Golden Summary */
+        .golden-summary.ai {
+            background: linear-gradient(135deg, #fceb98 0%, #fde68a 100%);
+            color: #1f2937;
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
+        }
+
+        .golden-summary.ai h3, .golden-summary.ai p {
+            color: #4b5563;
+        }
+
+        .golden-summary h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .golden-summary p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /* Talents Section */
+        .talents-section {
+            /* Changed background to be more vibrant */
+            background: #c3e6cb; /* A lively green for this section */
+            padding: 4rem 0;
+            margin: 0;
+        }
+
+        .talents-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .talents-column {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            /* Added top border for better visual separation */
+            border-top: 4px solid; 
+        }
+
+        .talents-column.classical {
+            background: #e0e7ff; /* Retaining light blue */
+            border-top-color: #6366f1; /* Stronger blue */
+        }
+
+        .talents-column.multiple {
+            background: #fffbeb; /* Retaining light yellow */
+            border-top-color: #facc15; /* Stronger yellow */
+        }
+
+        .talents-column h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #374151;
+        }
+        /* Color for heading in Multiple Intelligences */
+        .talents-column.multiple h4 {
+            color: #a16207; /* Darker yellow/orange for contrast */
+        }
+        /* Color for heading in Classical Intelligences */
+        .talents-column.classical h4 {
+            color: #3730a3; /* Darker blue for contrast */
+        }
+
+
+        .talents-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .talents-column li {
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .talents-column li:last-child {
+            border-bottom: none;
+        }
+
+        /* Sports Example */
+        .sports-example {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            border: 2px solid #10b981;
+        }
+
+        .sports-example h4 {
+            color: #10b981;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .sports-example p {
+            color: #4b5563;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Journey Section */
+        .journey-section {
+            padding: 4rem 0;
+            background: #f0f4f8;
+        }
+
+        .journey-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .journey-step {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border: 2px solid #e2e8f0;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            background: #2e4a86;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 12px rgba(46, 74, 134, 0.2);
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            margin: 1rem auto 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .step-icon.step1 {
+            background: #10b981;
+        }
+
+        .step-icon.step2 {
+            background: #3b82f6;
+        }
+
+        .step-icon.step3 {
+            background: #8b5cf6;
+        }
+
+        .journey-step h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+
+        .journey-step .step-content {
+            text-align: right;
+        }
+
+        .journey-step .step-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .journey-step .step-section h5 {
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .journey-step .step-section p {
+            color: #6b7280;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .journey-step .highlight {
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Final Section */
+        .final-section {
+            background: #2e4a86;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .final-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .final-section .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .community-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .community-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .community-item h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .community-item p {
+            font-size: 1rem;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        /* Life Section */
+        .life-section {
+            background: #f0f4f8;
+            padding: 4rem 0;
+        }
+
+        .life-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .life-column {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .life-column.positive {
+            background: #d1fae5;
+            border-top: 4px solid #10b981;
+        }
+
+        .life-column.negative {
+            background: #fef2f2;
+            border-top: 4px solid #ef4444;
+        }
+
+        .life-column h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .life-column.positive h4 {
+            color: #065f46;
+        }
+
+        .life-column.negative h4 {
+            color: #991b1b;
+        }
+
+        .life-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .life-column li {
+            padding: 0.8rem 0;
+            color: #374151;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border: 2px solid #10b981;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: #fde68a;
+            color: #4b5563;
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 3rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
+        }
+
+        .quote-section::before,
+        .quote-section::after {
+            content: '"';
+            font-size: 4rem;
+            font-weight: bold;
+            color: #d97706;
+            position: absolute;
+            top: 10px;
+        }
+
+        .quote-section::before {
+            right: 20px;
+        }
+
+        .quote-section::after {
+            left: 20px;
+        }
+
+        .final-cta-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.2);
+            font-family: 'Cairo', sans-serif;
+            margin-top: 2rem;
+        }
+
+        .final-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2e4a86;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer .quote {
+            font-style: italic;
+            color: #a7f3d0;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #10b981;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .comparison-grid,
+            .ai-grid,
+            .talents-grid,
+            .life-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-description {
+                padding: 2rem;
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Animation Effects */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "نحو جيل يغير العالم",
+      "name": "إيقاظ المواهب الفطرية في عصر التحولات الكبرى",
+      "author": {
+        "@type": "Person",
+        "name": "فريق نحو جيل يغير العالم"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitHub Pages",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rising-era.github.io/awaken-talents/logo.png"
+        }
+      },
+      "datePublished": "2024-09-09",
+      "dateModified": "2024-09-09",
+      "description": "دليل شامل لاكتشاف المواهب الفطرية وبناء مسار مهني وحياتي هادف في ظل التغيرات السريعة التي فرضها الذكاء الاصطناعي."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "لماذا لم يعد النموذج التقليدي للتعليم يعمل في عالم اليوم؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "النموذج التقليدي كان مصمماً لإنتاج موظفين للثورة الصناعية، ولم يعد يلبي احتياجات العالم الحديث القائمة على الإبداع والتفكير النقدي."
+        }
+      }, {
+        "@type": "Question",
+        "name": "ما هي الوظائف المهددة بالذكاء الاصطناعي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الذكاء الاصطناعي يهدد الوظائف التي تعتمد على المهام الروتينية والمتكررة مثل المحاسبة التقليدية وخدمة العملاء الأساسية، والتحليل المالي البسيط."
+        }
+      }, {
+        "@type": "Question",
+        "name": "ما هي المهارات المحمية من الذكاء الاصطناعي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الذكاء الاصطناعي لا يمكنه استبدال المهارات البشرية الفريدة مثل الإبداع، التفكير النقدي، الذكاء العاطفي، والقيادة وإلهام الآخرين."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
-  <header>
-    <h1>Awaken Talents</h1>
-    <p>نحو جيل يغير العالم</p>
-    <a href="#about" class="cta-btn">ابدأ رحلتك</a>
-  </header>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">نحو جيل يغير العالم</h1>
+            <p class="hero-subtitle">إيقاظ المواهب الفطرية في عصر التحولات الكبرى</p>
+            <div class="hero-description">
+                حان الوقت لتفكيك النموذج القديم وبناء مسارك الخاص. هذا هو دليلك لاكتشاف قدراتك الحقيقية والمساهمة في المستقبل.
+            </div>
+            <a href="#mainContentAnchor" class="cta-button">
+                <i class="fas fa-rocket"></i>
+                ابدأ رحلتك الآن
+            </a>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>من أين تبدأ الرحلة؟</h2>
-    <div class="card-grid">
-      <div class="card"><h3>الطريق</h3><p>نحو اكتشاف مواهبك الفطرية وصناعة مستقبلك الخاص.</p></div>
-      <div class="card"><h3>المشكلة</h3><p>التعليم الحالي لا يكشف مواهبك ولا يوجهك نحو قوتك.</p></div>
-      <div class="card"><h3>الحل</h3><p>استخدام الذكاء الاصطناعي لفهم شخصيتك واكتشاف مواهبك الفطرية.</p></div>
-    </div>
-  </section>
+    <div class="main-content" id="mainContent">
+        <a id="mainContentAnchor"></a> <section class="three-cards-section">
+            <div class="container">
+                <div class="three-cards">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>الطريق</h3>
+                        <p>خطوات عملية لبناء مسارك الخاص وتطوير مهاراتك الفطرية في عالم متغير</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>الحل</h3>
+                        <p>إيقاظ المواهب الفطرية والتعلم الموجه ذاتياً كبديل للنظام التقليدي</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>المشكلة</h3>
+                        <p>النموذج التقليدي للتعليم والعمل لم يعد يعمل في عالم اليوم المتسارع</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section>
-    <h2>شارك الفكرة</h2>
-    <p>ساعدنا في نشر الوعي حول أهمية اكتشاف المواهب الفطرية.</p>
-    <div class="social-share">
-      <a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?text=اكتشف%20مواهبك%20الفطرية%20وصمم%20مستقبلك%20نحو%20حياة%20طيبة&url=https://riseera47-spec.github.io/awaken-talents/">تويتر</a>
-      <a class="whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=اكتشف%20مواهبك%20الفطرية%20وصمم%20مستقبلك%20:%20https://riseera47-spec.github.io/awaken-talents/">واتساب</a>
-      <a class="linkedin" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=https://riseera47-spec.github.io/awaken-talents/">لينكدإن</a>
-    </div>
-  </section>
+        <section class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">وهم التعليم والصناعة</h2>
+                </div>
+                
+                <div class="why-not-working">
+                    <h4><i class="fas fa-exclamation-triangle"></i> لماذا لم يعد مسار الماضي يعمل؟</h4>
+                    <p>النموذج الذي أنشأه روكفلر وروتشيلد كان مصمماً لإنتاج موظفين مطيعين للمصانع والشركات الكبيرة. هذا النظام القائم على "المدرسة > الجامعة > الوظيفة > التقاعد" لم يعد يلبي احتياجات العالم الحديث.</p>
+                </div>
 
-  <footer>
-    <p>&copy; 2025 Awaken Talents | RiseEra47</p>
-  </footer>
-</body>
-</html>
+                <div class="education-content">
+                    <div class="comparison-section">
+                        <h3 class="comparison-title">مقارنة النماذج</h3>
+                        <div class="comparison-grid">
+                            <div class="comparison-column future">
+                                <h4>النموذج المستقبلي</h4>
+                                <ul>
+                                    <li>تعلم مخصص ومرن</li>
+                                    <li>مسارات متنوعة ومبتكرة</li>
+                                    <li>استقلالية وريادة</li>
+                                    <li>تفعيل المواهب الفطرية</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="comparison-column traditional">
+                                <h4>النموذج التقليدي</h4>
+                                <ul>
+                                    <li>تعليم موحد وجامد</li>
+                                    <li>وظائف ثابتة ومحدودة</li>
+                                    <li>اعتماد على النظام</li>
+                                    <li>قمع الإبداع والتفكير</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-golden-summary">
+                        <h3>الأدلة على فشل النظام القديم</h3>
+                        <p>ارتفاع معدلات البطالة، زيادة الاضطرابات النفسية، وانعدام الهدف في الحياة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">الذكاء الاصطناعي ومستقبلك</h2>
+                    <p class="section-subtitle">كيف تغير التكنولوجيا قواعد اللعبة</p>
+                </div>
+                
+                <div class="ai-grid">
+                    <div class="ai-column protected">
+                        <h4><i class="fas fa-shield-alt"></i> المهارات المحمية</h4>
+                        <ul>
+                            <li>• الإبداع والابتكار</li>
+                            <li>• التفكير النقدي</li>
+                            <li>• الذكاء العاطفي</li>
+                            <li>• القيادة وإلهام</li>
+                            <li>• الفنون والتصميم</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ai-column threatened">
+                        <h4><i class="fas fa-exclamation-triangle"></i> الوظائف المهددة</h4>
+                        <ul>
+                            <li>• الوظائف الروتينية والتكرارية</li>
+                            <li>• المحاسبة التقليدية</li>
+                            <li>• خدمة العملاء الأساسية</li>
+                            <li>• التحليل المالي البسيط</li>
+                            <li>• الترجمة الأساسية</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="golden-summary">
+                    <h3>الخلاصة الذهبية</h3>
+                    <p>المستقبل للذين يطورون مواهبهم الفطرية ويبنون مهاراتهم الشخصية. التغيير ليس خياراً بل ضرورة حتمية.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="talents-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">إيقاظ مواهبك الفطرية</h2>
+                    <p class="section-subtitle">الطريق إلى حياة هادفة - ماهية النظرية</p>
+                </div>
+                
+                <div class="talents-grid">
+                    <div class="talents-column multiple">
+                        <h4>الذكاءات المتعددة</h4>
+                        <ul>
+                            <li>• الذكاء اللغوي</li>
+                            <li>• الذكاء المنطقي-الرياضي</li>
+                            <li>• الذكاء البصري-المكاني</li>
+                            <li>• الذكاء الجسدي-الحركي</li>
+                            <li>• الذكاء الموسيقي</li>
+                            <li>• الذكاء الاجتماعي (بين الأشخاص)</li>
+                            <li>• الذكاء الذاتي (الداخلي)</li>
+                            <li>• الذكاء الطبيعي</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="talents-column classical">
+                        <h4>الذكاءات الكلاسيكية</h4>
+                        <ul>
+                            <li>• الذكاء اللغوي</li>
+                            <li>• الذكاء المنطقي - الرياضي</li>
+                            <li>• الذكاء التذكّري</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="sports-example">
+                    <h4><i class="fas fa-futbol"></i> مثال من عالم الرياضة</h4>
+                    <p>في كرة القدم، يتم اكتشاف المواهب في سن مبكرة وتطويرها بطريقة مكثفة ومتخصصة. لماذا لا نطبق نفس المبدأ في جميع مجالات الحياة؟</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="journey-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">مسارك الخاص: خطوات عملية</h2>
+                </div>
+                
+                <div class="journey-steps">
+                    <div class="journey-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon step1">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>التأمل الذاتي والاستكشاف</h4>
+                        <div class="step-content">
+                            <div class="step-section">
+                                <h5>تدوين اليوميات</h5>
+                                <p>• اكتب انطباعاتك اليومية<br>• راقب أنماط اهتمام
