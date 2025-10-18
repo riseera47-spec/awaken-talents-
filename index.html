@@ -835,70 +835,98 @@
             box-shadow: 0 8px 30px rgba(16, 185, 129, 0.3);
         }
 
-        /* NEW CSS: Start Point Section */
+        /* NEW CSS: Start Point Section - DESIGN ENHANCEMENTS APPLIED HERE */
         .start-point-section {
-            background: #4a69ad; /* Secondary brand color */
+            background: #364e7c; /* Darker blue for depth */
             padding: 4rem 0;
-            text-align: right; /* Changed to right for narrative flow */
+            text-align: right; 
             color: white;
+            /* Subtle texture/gradient for depth */
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.1) 100%);
         }
         
         .start-point-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.8rem; /* Slightly larger */
+            font-weight: 800; /* Bolder */
             margin-bottom: 1.5rem;
             text-align: center;
-            border-bottom: 2px solid #f59e0b;
+            border-bottom: 3px solid #fde047; /* Gold separator line */
             padding-bottom: 10px;
-            max-width: 500px;
-            margin: 0 auto 2.5rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color: #fde047; /* Gold color for the title */
+            /* Text shadow for a 'glow' effect */
+            text-shadow: 0 0 10px rgba(253, 224, 71, 0.5); 
         }
 
+        /* New Style for Step H3 (making the icon a distinct badge) */
         .start-point-section h3 {
             font-size: 1.6rem;
             font-weight: 700;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: #fde047; /* Yellow highlight for steps */
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: white; 
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3); /* Subtle separator */
+        }
+        
+        /* Styling the emoji/icon within H3 to look like a gold badge */
+        .start-point-section h3::before {
+            content: attr(data-icon); /* Use an attribute for content if needed, but for Emojis we style the whole H3 */
+            background-color: #fde047; /* Gold background */
+            color: #364e7c; /* Dark text/emoji color */
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 1.4rem;
+            line-height: 1;
+            font-weight: 900;
+            box-shadow: 0 0 15px rgba(253, 224, 71, 0.4);
+        }
+        /* Override the 'h3' style to allow emojis inside to be the badge */
+        .start-point-section h3 {
+            /* Reset the default emoji position */
+            display: block; 
+            color: #fde047;
+            font-size: 1.8rem; /* Make the number/icon larger within the H3 */
+        }
+        
+        /* The actual step text that follows the number/icon */
+        .start-point-section h3 span {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 700;
         }
 
+
         .start-point-section p {
-            font-size: 1.15rem;
+            font-size: 1.2rem; /* Slightly larger body text */
             max-width: 100%;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
-            line-height: 1.9;
+            margin-bottom: 1.8rem; /* More space between paragraphs */
+            opacity: 0.98;
+            line-height: 2; /* Increased line height for better readability (The Arabic line-height is crucial) */
         }
 
         .start-point-section strong {
             font-weight: 800;
-            color: #f59e0b; /* Orange highlight */
+            color: #ffcc80; /* Lighter Orange/Peach for strong emphasis */
         }
 
-        .start-point-section .start-link {
-            display: inline-block;
-            background-color: #f59e0b; /* Orange highlight */
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
-            margin-top: 2rem;
-        }
-        
         .start-point-section .time-note {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 3rem 0;
+            background: rgba(255, 255, 255, 0.15); /* Slightly lighter transparent background */
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 4rem 0; /* More margin to separate it */
             border-right: 5px solid #ef4444;
             font-style: italic;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            font-size: 1.15rem;
+        }
+        
+        .start-point-section .time-note strong {
+             color: #ef4444; /* Red color for the time heading */
         }
         
         .start-point-section .summary-box {
@@ -909,6 +937,8 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
             font-weight: 600;
+            font-size: 1.2rem;
+            color: #a7f3d0; /* Soft green color for the conclusion */
         }
 
         /* Footer */
@@ -942,18 +972,19 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem; /* Reduced gap since there are fewer links */
+            gap: 2rem; /* Increased gap */
             margin-top: 2rem;
         }
 
         .social-links a {
             color: white;
-            font-size: 1.8rem;
-            transition: color 0.3s ease;
+            font-size: 2rem; /* Slightly larger icons */
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .social-links a:hover {
             color: #10b981;
+            transform: scale(1.1); /* Zoom effect on hover */
         }
 
         /* Responsive Design */
@@ -996,7 +1027,7 @@
             }
             
             .start-point-section h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
         }
 
@@ -1342,7 +1373,7 @@
         
         <section class="start-point-section fade-in">
             <div class="container">
-                <h2>✨ ابدأ من هنا: الشرارة الأولى</h2>
+                <h2 style="color: #fde047;">✨ ابدأ من هنا: الشرارة الأولى</h2>
                 
                 <p>كل إنسان وُلد وفي داخله بوصلة صغيرة، تشير بصمت إلى معنى لا يشبه سواه.</p>
 
@@ -1353,20 +1384,20 @@
                 <p>ربما تشعر بذلك الخيط الخفيف من القلق، ليس خوفًا من الفشل، بل من أن يمضي عمرك دون أن تكتشف لِمَ وُجدت.</p>
 
                 <p>وإن كنت تقرأ هذه الكلمات الآن، فربما هذا هو **النداء الأول** من ذاتك الحقيقية:</p>
-                <p style="text-align: center; font-size: 1.4rem; font-weight: bold; color: #f59e0b; margin: 2rem 0;">“انهض… لقد حان الوقت.”</p>
+                <p style="text-align: center; font-size: 1.6rem; font-weight: 800; color: #f59e0b; margin: 2rem 0; text-shadow: 0 0 5px rgba(245, 158, 11, 0.6);">“انهض… لقد حان الوقت.”</p>
                 <p>الرحلة لا تحتاج إلى خطة مثالية، بل إلى خطوة واحدة صادقة. وسأريك كيف تبدأها الآن...</p>
 
-                <h3>1. ✍️ اكتب ما يوقظ فضولك</h3>
+                <h3 data-icon="✍️">1. <span style="font-weight: 700;">اكتب ما يوقظ فضولك</span></h3>
                 <p>خذ ورقة أو افتح ملاحظات هاتفك، واكتب بلا تفكير:</p>
-                <p style="padding-right: 20px; border-right: 3px solid #fde047; margin-right: 20px; font-style: italic;">ما الأشياء التي أعود إليها دائمًا؟ ما المواضيع التي تستوقفني حتى وسط الانشغال؟</p>
+                <p style="padding-right: 20px; border-right: 3px solid #ffcc80; margin-right: 20px; font-style: italic; font-size: 1.1rem; opacity: 0.9;">ما الأشياء التي أعود إليها دائمًا؟ ما المواضيع التي تستوقفني حتى وسط الانشغال؟</p>
                 <p>حين تكتبها، لا تراجعها ولا تبررها. دع قلبك يسبق قلمك، فالقلب يعرف الطريق قبل العقل بزمن. هذه ليست قائمة هوايات، بل **إشارات من موهبتك** وهي تحاول أن تُعرّفك بنفسها.</p>
 
-                <h3>2. 🌱 اختبر فكرة هذا الأسبوع</h3>
+                <h3 data-icon="🌱">2. <span style="font-weight: 700;">اختبر فكرة هذا الأسبوع</span></h3>
                 <p>لا تنتظر الإلهام المثالي أو اللحظة المناسبة، فالموهبة لا تظهر تحت الضوء بل تُكتشف **بالحركة**.</p>
                 <p>اختر شيئًا بسيطًا — جرب، حتى لو كان صغيرًا إلى حد السذاجة. ارسم، صوّر، صمّم، اكتب، ساعد، شارك… المهم أن تفعل.</p>
                 <p>التجربة ليست اختبارًا للنجاح، بل طريقة لتذكير نفسك بأنك ما زلت حيًا وقادرًا على التشكّل. في كل محاولة، ستلمس جزءًا من حقيقتك التي نسيتها بين مشاغل الأيام.</p>
 
-                <h3>3. 📖 دوّن رحلتك</h3>
+                <h3 data-icon="📖">3. <span style="font-weight: 700;">دوّن رحلتك</span></h3>
                 <p>في نهاية كل أسبوع، خذ بضع دقائق واكتب ما شعرت به وما لاحظته. اكتب بصراحة: **ما الذي حركك؟ ما الذي أثارك؟ وما الذي أحبطك؟**</p>
                 <p>الكتابة هنا ليست توثيقًا، بل حديث صدق مع الذات. فبعد أسابيع قليلة، ستبدأ ترى خيوطًا تتكرر — خيوطًا تشكّل ملامح الطريق الذي يخصك أنت وحدك. وحين تنظر إلى الوراء، ستدرك أن التغيير لم يحدث فجأة، بل تَشكّل بهدوء بين سطور يومياتك.</p>
 
