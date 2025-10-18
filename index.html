@@ -742,4 +742,85 @@
             font-weight: 700;
             margin-bottom: 1.5rem;
             display: flex;
-            align
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .life-column.positive h4 {
+            color: #065f46;
+        }
+
+        .life-column.negative h4 {
+            color: #991b1b;
+        }
+
+        .life-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .life-column li {
+            padding: 0.8rem 0;
+            color: #374151;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border: 2px solid #10b981;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: #fde68a;
+            color: #4b5563;
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 3rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
+        }
+
+        .quote-section::before,
+        .quote-section::after {
+            content: '"';
+            font-size: 4rem;
+            font-weight: bold;
+            color: #d97706;
+            position: absolute;
+            top: 10px;
+        }
+
+        .quote-section::before {
+            right: 20px;
+        }
+
+        .quote-section::after {
+            left: 20px;
+        }
+
+        .final-cta-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display:
