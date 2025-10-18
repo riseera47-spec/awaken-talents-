@@ -20,6 +20,55 @@
             line-height: 1.6;
             color: #333;
             background-color: #f0f4f8;
+            padding-top: 5rem; /* مساحة لرأس الصفحة الثابت */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Navigation */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 1rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #2e4a86;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4a69ad;
         }
 
         /* Hero Section */
@@ -32,7 +81,7 @@
             text-align: center;
             color: white;
             position: relative;
-            padding: 2rem;
+            padding: 4rem 2rem 2rem; /* تم زيادة المساحة العلوية لاستيعاب الهيدر */
         }
 
         .hero-content {
@@ -95,12 +144,6 @@
         .main-content {
             padding: 0;
             background: #f0f4f8;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
         }
 
         /* Three Cards Section */
@@ -208,11 +251,86 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
         }
-        /* تم إزالة .why-not-working{} الفارغ وتصحيح الوسوم الناقصة أدناه */
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+            text-align: right;
+            border-right: 4px solid #4a69ad;
+            padding-right: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-item h4 {
+            font-size: 1.5rem;
+            color: #2e4a86;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-item p {
+            color: #4b5563;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            right: -10px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: #4a69ad;
+            border-radius: 50%;
+            border: 3px solid #e3f2fd;
+        }
+        
+        /* Footer */
+        .main-footer {
+            background-color: #2e4a86;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #10b981;
+        }
     </style>
 </head>
 <body>
-    <main>
+    
+    <header class="main-header">
+        <div class="container navbar">
+            <a href="#" class="logo">RiseEra</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#why-us">لماذا نحن؟</a></li>
+                    <li><a href="#register">البرامج والتعليم</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
         <section class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-title">نحو جيل يغير العالم</h1>
@@ -229,7 +347,7 @@
 
         <div class="main-content">
             <div class="container">
-                <section class="three-cards-section">
+                <section class="three-cards-section" id="why-us">
                     <header class="section-header">
                         <h2 class="section-title">لماذا نحن؟</h2>
                         <p class="section-subtitle">نقدم مساراً تعليمياً متكاملاً يركز على ثلاثة محاور أساسية لمواكبة المستقبل.</p>
@@ -238,17 +356,17 @@
                         <div class="card">
                             <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
                             <h3>إيقاظ الموهبة</h3>
-                            <p>نستخدم أحدث الأساليب لاكتشاف وصقل نقاط القوة الفطرية لدى الأفراد، وتحويلها إلى مهارات عملية ومطلوبة.</p>
+                            <p>نستخدم أحدث الأساليب لاكتشاف وصقل نقاط القوة الفطرية لدى الأفراد، وتحويلها إلى مهارات عملية ومطلوبة. يشمل ذلك اختبارات تحديد الميول والتدريب الشخصي.</p>
                         </div>
                         <div class="card">
                             <div class="card-icon"><i class="fas fa-rocket"></i></div>
                             <h3>ريادة الأعمال</h3>
-                            <p>تعليم مبادئ تأسيس المشاريع الصغيرة والكبيرة، وتزويد الطلاب بعقلية الابتكار وحل المشكلات العالمية المعقدة.</p>
+                            <p>تعليم مبادئ تأسيس المشاريع الصغيرة والكبيرة، وتزويد الطلاب بعقلية الابتكار وحل المشكلات العالمية المعقدة، من الفكرة حتى إطلاق المنتج.</p>
                         </div>
                         <div class="card">
                             <div class="card-icon"><i class="fas fa-brain"></i></div>
                             <h3>التعليم المستقبلي</h3>
-                            <p>منهج يركز على الذكاء الاصطناعي، البرمجة، والتعلم الذاتي، لضمان جاهزية الجيل لسوق العمل المستقبلي.</p>
+                            <p>منهج يركز على الذكاء الاصطناعي، البرمجة، والتعلم الذاتي، لضمان جاهزية الجيل لسوق العمل المستقبلي. نغطي أساسيات الـ Machine Learning وعلوم البيانات.</p>
                         </div>
                     </div>
                 </section>
@@ -260,13 +378,57 @@
                             <p class="section-subtitle">رحلة متدرجة وممتعة تضمن انتقالك من مرحلة الاكتشاف إلى مرحلة التنفيذ والريادة.</p>
                         </header>
                         <div class="education-content">
-                            <p>هنا سيكون محتوى مفصل حول مراحل التعليم والبرامج المقدمة. (يمكنك إضافة محتواك هنا)</p>
+                            <h3>مراحل البرنامج:</h3>
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <h4>المرحلة الأولى: الاكتشاف والتقييم</h4>
+                                <p>تقييم شامل للمهارات والميول الفطرية وتحديد مسار التطوير المناسب. مدتها 4 أسابيع.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <h4>المرحلة الثانية: صقل المهارات الأساسية</h4>
+                                <p>التدريب المكثف على أساسيات البرمجة، التفكير النقدي، والعمل الجماعي. مدتها 8 أسابيع.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <h4>المرحلة الثالثة: الإطلاق والريادة</h4>
+                                <p>بناء مشروعك الخاص وتلقي الإرشاد من الخبراء، مع التركيز على التسويق الرقمي وإدارة المنتج. مدتها 12 أسبوعاً.</p>
+                            </div>
+                            <div style="text-align: center; margin-top: 3rem;">
+                                <a href="#contact" class="cta-button">
+                                    سجل الآن للحصول على استشارة مجانية
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                </section>
+                
+                <section class="three-cards-section" id="contact">
+                    <header class="section-header">
+                        <h2 class="section-title">تواصل معنا</h2>
+                        <p class="section-subtitle">نحن جاهزون للإجابة على جميع استفساراتك.</p>
+                    </header>
+                    <div class="card" style="max-width: 600px; margin: 0 auto;">
+                        <div class="card-icon" style="background: #4a69ad;"><i class="fas fa-envelope"></i></div>
+                        <h3>الاستفسارات والردود</h3>
+                        <p>يمكنك التواصل معنا عبر البريد الإلكتروني وسنرد عليك خلال 24 ساعة عمل.</p>
+                        <a href="mailto:info@riseera.com" style="display: block; margin-top: 1rem; color: #4a69ad; font-weight: 600;">info@riseera.com</a>
                     </div>
                 </section>
             </div>
         </div>
     </main>
+    
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 RiseEra. جميع الحقوق محفوظة.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
-
