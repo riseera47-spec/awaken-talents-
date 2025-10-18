@@ -837,148 +837,109 @@
 
         /* NEW CSS: Start Point Section - DESIGN ENHANCEMENTS APPLIED HERE */
         .start-point-section {
-            background: #1f2937; /* Deep Charcoal Blue */
-            padding: 6rem 0; /* More vertical space */
+            background: #364e7c; /* Darker blue for depth */
+            padding: 4rem 0;
             text-align: right; 
-            color: #f8f8f8;
-            /* Subtle dark noise pattern for texture */
-            background-image: radial-gradient(circle at 100% 150%, #2e3e50 0%, #1f2937 80%, #1f2937 100%); 
+            color: white;
+            /* Subtle texture/gradient for depth */
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.1) 100%);
         }
         
         .start-point-section h2 {
-            font-size: 3.5rem; /* Massive title */
-            font-weight: 900; 
-            margin-bottom: 2rem;
+            font-size: 2.8rem; /* Slightly larger */
+            font-weight: 800; /* Bolder */
+            margin-bottom: 1.5rem;
             text-align: center;
+            border-bottom: 3px solid #fde047; /* Gold separator line */
             padding-bottom: 10px;
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto 3rem;
-            color: #ffcc00; /* Rich Gold color for the title */
-            /* Stronger Text Glow */
-            text-shadow: 0 0 20px rgba(255, 204, 0, 0.7), 0 0 5px rgba(255, 204, 0, 0.3); 
-            line-height: 1.2;
+            color: #fde047; /* Gold color for the title */
+            /* Text shadow for a 'glow' effect */
+            text-shadow: 0 0 10px rgba(253, 224, 71, 0.5); 
+        }
+
+        /* New Style for Step H3 (making the icon a distinct badge) */
+        .start-point-section h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: white; 
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3); /* Subtle separator */
         }
         
-        .start-point-section > p {
-            font-size: 1.4rem; 
-            max-width: 900px;
-            margin: 1.5rem auto; 
-            opacity: 0.9;
-            line-height: 2.2; /* Excellent line height for Arabic readability */
-            text-align: center; /* Center the introduction paragraph */
+        /* Styling the emoji/icon within H3 to look like a gold badge */
+        .start-point-section h3::before {
+            content: attr(data-icon); /* Use an attribute for content if needed, but for Emojis we style the whole H3 */
+            background-color: #fde047; /* Gold background */
+            color: #364e7c; /* Dark text/emoji color */
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 1.4rem;
+            line-height: 1;
+            font-weight: 900;
+            box-shadow: 0 0 15px rgba(253, 224, 71, 0.4);
+        }
+        /* Override the 'h3' style to allow emojis inside to be the badge */
+        .start-point-section h3 {
+            /* Reset the default emoji position */
+            display: block; 
+            color: #fde047;
+            font-size: 1.8rem; /* Make the number/icon larger within the H3 */
         }
         
+        /* The actual step text that follows the number/icon */
+        .start-point-section h3 span {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+
+        .start-point-section p {
+            font-size: 1.2rem; /* Slightly larger body text */
+            max-width: 100%;
+            margin-bottom: 1.8rem; /* More space between paragraphs */
+            opacity: 0.98;
+            line-height: 2; /* Increased line height for better readability (The Arabic line-height is crucial) */
+        }
+
         .start-point-section strong {
             font-weight: 800;
-            color: #90ee90; /* Light Green for emphasis on core concepts */
-        }
-        
-        .start-point-section .call-to-action-line {
-            text-align: center; 
-            font-size: 1.8rem; 
-            font-weight: 800; 
-            color: #f59e0b; /* Orange emphasis */
-            margin: 3rem 0; 
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05); /* Subtle background for the CTA line */
-            border-radius: 10px;
-            border-top: 2px solid #f59e0b;
+            color: #ffcc80; /* Lighter Orange/Peach for strong emphasis */
         }
 
-
-        /* NEW: Visual Steps Structure */
-        .steps-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-
-        .visual-step {
-            background: rgba(255, 255, 255, 0.08); /* Light box on dark background */
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .visual-step:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.12);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        .step-header {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .step-number-badge {
-            background: #ffcc00; /* Gold */
-            color: #1f2937; /* Dark text */
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 900;
-            box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
-        }
-
-        .step-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-            line-height: 1.4;
-        }
-        
-        .visual-step p {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            opacity: 0.9;
-            margin-bottom: 0.8rem;
-        }
-
-        /* Time Note - The Warning Box */
         .start-point-section .time-note {
-            background: #2b3b4d; /* Slightly different dark shade */
-            padding: 3rem;
+            background: rgba(255, 255, 255, 0.15); /* Slightly lighter transparent background */
+            padding: 2rem;
             border-radius: 15px;
-            margin: 5rem auto; 
-            border: 2px solid #ef4444; /* Strong Red Border */
+            margin: 4rem 0; /* More margin to separate it */
+            border-right: 5px solid #ef4444;
             font-style: italic;
-            box-shadow: 0 0 30px rgba(239, 68, 68, 0.5); /* Red Glow */
-            font-size: 1.3rem;
-            max-width: 900px;
-            text-align: center;
-            line-height: 2;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            font-size: 1.15rem;
         }
         
         .start-point-section .time-note strong {
-             color: #fca5a5; /* Light Red color for emphasis inside */
-             font-weight: 800;
+             color: #ef4444; /* Red color for the time heading */
         }
         
         .start-point-section .summary-box {
-            background: #2e4a86; /* Blue to connect back to the hero section */
-            padding: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
             border-radius: 15px;
-            margin-top: 4rem;
-            border: 1px solid #60a5fa;
+            margin-top: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
             font-weight: 600;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: #a7f3d0; /* Soft green color for the conclusion */
-            max-width: 900px;
-            margin: 4rem auto 0;
-            line-height: 1.8;
         }
-
 
         /* Footer */
         .footer {
@@ -1043,8 +1004,7 @@
             .comparison-grid,
             .ai-grid,
             .talents-grid,
-            .life-grid,
-            .steps-container {
+            .life-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1063,7 +1023,7 @@
             
             /* FIX: Increased container padding for better mobile spacing */
             .container {
-                padding: 0 1.5rem; 
+                padding: 0 2rem; 
             }
             
             .start-point-section h2 {
@@ -1158,323 +1118,398 @@
     </section>
 
     <div class="main-content" id="mainContent">
-        
-        <a id="three-cards-section-anchor"></a> 
-        <section class="three-cards-section">
+        <a id="three-cards-section-anchor"></a> <section class="three-cards-section">
             <div class="container">
                 <div class="three-cards">
                     <div class="card fade-in">
-                        <div class="card-icon"><i class="fas fa-question-circle"></i></div>
+                        <div class="card-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
                         <h3>المشكلة</h3>
-                        <p>التعليم التقليدي لم يعد يعدّ الطلاب لعالم يحكمه الذكاء الاصطناعي، مما يتركهم دون أدوات لمواجهة المستقبل.</p>
-                    </div>
-                    <div class="card fade-in" data-delay="100">
-                        <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-                        <h3>الحل</h3>
-                        <p>اكتشاف وتنمية المواهب الفطرية والذكاءات المتعددة لتوفير الميزة التنافسية البشرية ضد الأتمتة.</p>
-                    </div>
-                    <div class="card fade-in" data-delay="200">
-                        <div class="card-icon"><i class="fas fa-route"></i></div>
-                        <h3>الطريق</h3>
-                        <p>رحلة واضحة وممنهجة لتحويل الموهبة الفطرية إلى مسار مهني وريادي مستدام يخدم الأهداف الكبرى.</p>
-                    </div>
-                </div> </div> </section> <section class="education-section">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title">لماذا لم يعد النموذج التقليدي للتعليم يعمل؟</h2>
-                    <p class="section-subtitle">لقد تم تصميم المدارس والجامعات على نموذج الثورة الصناعية، وهي تنتج موظفين بدلاً من مبدعين ورواد أعمال.</p>
-                </div>
-                <div class="education-content fade-in" data-delay="100">
-                    <div class="why-not-working">
-                        <h4><i class="fas fa-exclamation-triangle"></i> التعليم الحالي يخلق فجوة</h4>
-                        <p>يركز النظام الحالي على الحفظ، الدرجات، والمنافسة في مجالات يمكن للآلة التفوق فيها. إنه يقتل الموهبة الفطرية ويضع الجميع في قالب واحد.</p>
+                        <p>النموذج التقليدي للتعليم والعمل لم يعد يعمل في عالم اليوم المتسارع</p>
                     </div>
                     
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>الحل</h3>
+                        <p>إيقاظ المواهب الفطرية والتعلم الموجه ذاتياً كبديل للنظام التقليدي</p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>الطريق</h3>
+                        <p>خطوات عملية لبناء مسارك الخاص وتطوير مهاراتك الفطرية في عالم متغير</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">وهم التعليم والصناعة</h2>
+                </div>
+                
+                <div class="why-not-working fade-in">
+                    <h4><i class="fas fa-exclamation-triangle"></i> لماذا لم يعد مسار الماضي يعمل؟</h4>
+                    <p>النموذج الذي أنشأه روكفلر وروتشيلد كان مصمماً لإنتاج موظفين مطيعين للمصانع والشركات الكبيرة. هذا النظام القائم على "المدرسة > الجامعة > الوظيفة > التقاعد" لم يعد يلبي احتياجات العالم الحديث.</p>
+                </div>
+
+                <div class="education-content">
                     <div class="comparison-section">
-                        <h3 class="comparison-title">مقارنة: التعليم التقليدي مقابل التعليم المستقبلي</h3>
+                        <h3 class="comparison-title">مقارنة النماذج</h3>
                         <div class="comparison-grid">
-                            <div class="comparison-column traditional fade-in">
-                                <h4>النموذج التقليدي (الماضي)</h4>
+                            <div class="comparison-column future fade-in">
+                                <h4>النموذج المستقبلي</h4>
                                 <ul>
-                                    <li>الهدف هو إيجاد وظيفة (موظف)</li>
-                                    <li>يركز على الذكاء الأكاديمي فقط (IQ)</li>
-                                    <li>الحفظ والمهام الروتينية</li>
-                                    <li>يولد الخوف من الفشل</li>
+                                    <li>تعلم مخصص ومرن</li>
+                                    <li>مسارات متنوعة ومبتكرة</li>
+                                    <li>استقلالية وريادة</li>
+                                    <li>تفعيل المواهب الفطرية</li>
                                 </ul>
                             </div>
-                            <div class="comparison-column future fade-in" data-delay="100">
-                                <h4>النموذج المستقبلي (نحن)</h4>
+                            
+                            <div class="comparison-column traditional fade-in">
+                                <h4>النموذج التقليدي</h4>
                                 <ul>
-                                    <li>الهدف هو الإبداع والريادة (مغير للعالم)</li>
-                                    <li>يركز على الذكاءات المتعددة والمواهب</li>
-                                    <li>التفكير النقدي وحل المشكلات المعقدة</li>
-                                    <li>يحتفي بالتجربة والتعلم من الفشل</li>
+                                    <li>تعليم موحد وجامد</li>
+                                    <li>وظائف ثابتة ومحدودة</li>
+                                    <li>اعتماد على النظام</li>
+                                    <li>قمع الإبداع والتفكير</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="education-golden-summary fade-in" data-delay="200">
-                    <h3>ملخص الفجوة</h3>
-                    <p>المشكلة ليست فيك، بل في النظام الذي لم يتغير. مستقبلنا يعتمد على كسر هذا القالب وبناء مسار جديد يوقظ القدرات البشرية الحقيقية.</p>
+                    
+                    <div class="education-golden-summary fade-in">
+                        <h3>الأدلة على فشل النظام القديم</h3>
+                        <p>ارتفاع معدلات البطالة، زيادة الاضطرابات النفسية، وانعدام الهدف في الحياة.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="ai-section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title">مستقبل العمل في ظل الذكاء الاصطناعي</h2>
-                    <p class="section-subtitle">الذكاء الاصطناعي ليس تهديداً، بل مصفاة. سيزيل الوظائف الروتينية ليفسح المجال للمهارات البشرية الفريدة.</p>
+                <div class="section-header">
+                    <h2 class="section-title">الذكاء الاصطناعي ومستقبلك</h2>
+                    <p class="section-subtitle">كيف تغير التكنولوجيا قواعد اللعبة</p>
                 </div>
-
+                
                 <div class="ai-grid">
-                    <div class="ai-column threatened fade-in">
-                        <h4><i class="fas fa-robot"></i> وظائف مهددة بالانقراض (بسبب الأتمتة)</h4>
+                    <div class="ai-column protected fade-in">
+                        <h4><i class="fas fa-shield-alt"></i> المهارات المحمية</h4>
                         <ul>
-                            <li>المحاسبة التقليدية وإدخال البيانات</li>
-                            <li>خدمة العملاء الأساسية (الردود الروتينية)</li>
-                            <li>تحليل البيانات البسيط وتلخيصها</li>
-                            <li>الكتابة التقنية والترجمة الحرفية</li>
+                            <li>• الإبداع والابتكار</li>
+                            <li>• التفكير النقدي</li>
+                            <li>• الذكاء العاطفي</li>
+                            <li>• القيادة وإلهام</li>
+                            <li>• الفنون والتصميم</li>
                         </ul>
                     </div>
-                    <div class="ai-column protected fade-in" data-delay="100">
-                        <h4><i class="fas fa-shield-alt"></i> مهارات محمية من الذكاء الاصطناعي</h4>
+                    
+                    <div class="ai-column threatened fade-in">
+                        <h4><i class="fas fa-exclamation-triangle"></i> الوظائف المهددة</h4>
                         <ul>
-                            <li>**الإبداع الأصيل** وتوليد الأفكار الجديدة</li>
-                            <li>**التفكير النقدي** وحل المشكلات البشرية المعقدة</li>
-                            <li>**القيادة**، الإلهام، والذكاء العاطفي</li>
-                            <li>**التفاوض** وبناء العلاقات المعقدة</li>
+                            <li>• الوظائف الروتينية والتكرارية</li>
+                            <li>• المحاسبة التقليدية</li>
+                            <li>• خدمة العملاء الأساسية</li>
+                            <li>• التحليل المالي البسيط</li>
+                            <li>• الترجمة الأساسية</li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="golden-summary ai fade-in" data-delay="200">
-                    <h3>خلاصة الذكاء الاصطناعي</h3>
-                    <p>لتحافظ على مكانك، يجب أن تكتشف موهبتك الفطرية وتطور المهارات التي لا يمكن للآلة تقليدها: **أن تكون إنساناً بذكاءاته المتعددة**.</p>
+                
+                <div class="golden-summary fade-in">
+                    <h3>الخلاصة الذهبية</h3>
+                    <p>المستقبل للذين يطورون مواهبهم الفطرية ويبنون مهاراتهم الشخصية. التغيير ليس خياراً بل ضرورة حتمية.</p>
                 </div>
             </div>
         </section>
 
         <section class="talents-section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title" style="color: #059669;">المواهب الفطرية والذكاءات المتعددة</h2>
-                    <p class="section-subtitle" style="color: #10b981;">الجميع موهوب، ولكن بطرق مختلفة. مفتاح النجاح هو تحديد "ما أنت الأفضل فيه بالفطرة".</p>
+                <div class="section-header">
+                    <h2 class="section-title">إيقاظ مواهبك الفطرية</h2>
+                    <p class="section-subtitle">الطريق إلى حياة هادفة - ماهية النظرية</p>
                 </div>
                 
                 <div class="talents-grid">
-                    <div class="talents-column classical fade-in">
-                        <h4>الذكاء التقليدي (المنطقي/اللفظي)</h4>
+                    <div class="talents-column multiple fade-in">
+                        <h4>الذكاءات المتعددة</h4>
                         <ul>
-                            <li><i class="fas fa-calculator"></i> الذكاء الرياضي/المنطقي (حل المعادلات)</li>
-                            <li><i class="fas fa-book-open"></i> الذكاء اللفظي/اللغوي (الكتابة والتعبير)</li>
-                            <li>هذا ما يركز عليه التعليم التقليدي.</li>
+                            <li>• الذكاء اللغوي</li>
+                            <li>• الذكاء المنطقي-الرياضي</li>
+                            <li>• الذكاء البصري-المكاني</li>
+                            <li>• الذكاء الجسدي-الحركي</li>
+                            <li>• الذكاء الموسيقي</li>
+                            <li>• الذكاء الاجتماعي (بين الأشخاص)</li>
+                            <li>• الذكاء الذاتي (الداخلي)</li>
+                            <li>• الذكاء الطبيعي</li>
                         </ul>
                     </div>
-                    <div class="talents-column multiple fade-in" data-delay="100">
-                        <h4>الذكاءات المتعددة (المواهب الفطرية)</h4>
+                    
+                    <div class="talents-column classical fade-in">
+                        <h4>الذكاءات الكلاسيكية</h4>
                         <ul>
-                            <li><i class="fas fa-users"></i> **الذكاء الاجتماعي** (القيادة وبناء الفرق)</li>
-                            <li><i class="fas fa-paint-brush"></i> **الذكاء الإبداعي** (التصميم والابتكار)</li>
-                            <li><i class="fas fa-running"></i> **الذكاء الحركي/الجسدي** (الرياضة والمهارات اليدوية)</li>
-                            <li><i class="fas fa-headphones-alt"></i> **الذكاء الموسيقي** (الإيقاع والتلحين)</li>
-                            <li>هذا ما سيحميك من الذكاء الاصطناعي.</li>
+                            <li>• الذكاء اللغوي</li>
+                            <li>• الذكاء المنطقي - الرياضي</li>
+                            <li>• الذكاء التذكّري</li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="sports-example fade-in" data-delay="200">
-                    <h4><i class="fas fa-bolt"></i> مثال: كيف تصبح متميزاً عالمياً</h4>
-                    <p>النجاح الحقيقي يكمن في دمج موهبتك الفطرية (مثل **الذكاء الحركي** لتصبح رياضي محترف) مع المهارات المحمية (مثل **الذكاء الاجتماعي** للقيادة وإلهام الفريق). **هذا هو الإنجاز البشري الذي لا يُستبدل**.</p>
+                
+                <div class="sports-example fade-in">
+                    <h4><i class="fas fa-futbol"></i> مثال من عالم الرياضة</h4>
+                    <p>في كرة القدم، يتم اكتشاف المواهب في سن مبكرة وتطويرها بطريقة مكثفة ومتخصصة. لماذا لا نطبق نفس المبدأ في جميع مجالات الحياة؟</p>
                 </div>
             </div>
         </section>
 
         <section class="journey-section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title">رحلة إيقاظ موهبتك وبناء مسارك</h2>
-                    <p class="section-subtitle">رحلتك نحو التميز تتكون من ثلاث مراحل رئيسية، من الاكتشاف إلى القيادة.</p>
+                <div class="section-header">
+                    <h2 class="section-title">مسارك الخاص: خطوات عملية</h2>
                 </div>
-
+                
                 <div class="journey-steps">
                     <div class="journey-step fade-in">
                         <div class="step-number">1</div>
-                        <div class="step-icon step1"><i class="fas fa-search"></i></div>
-                        <h4>الاكتشاف والتحديد</h4>
+                        <div class="step-icon step1">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>التأمل الذاتي والاستكشاف</h4>
                         <div class="step-content">
                             <div class="step-section">
-                                <h5>الهدف:</h5>
-                                <p>فهم الذكاءات المتعددة وتحديد المواهب الفطرية والقدرات الكامنة التي تميزك عن الآخرين.</p>
+                                <h5>تدوين اليوميات</h5>
+                                <p>• اكتب انطباعاتك اليومية<br>• راقب أنماط اهتمامك<br>• سجل إنجازاتك الصغيرة</p>
                             </div>
                             <div class="step-section">
-                                <h5>الأدوات:</h5>
-                                <p>اختبارات الذكاء المتعدد، تحليل الشخصية، وتقييم نقاط القوة العاطفية والاجتماعية.</p>
+                                <h5>جرب ثم جرب</h5>
+                                <p>• جرب هوايات وأنشطة متنوعة<br>• اشترك في ورش مع الآخرين<br>• انتبه لما يثير شغفك<br>• لاحظ ما تتقنه بسهولة</p>
                             </div>
-                            <p class="highlight">الخلاصة: **أنت تعرف الآن ماذا تملك!**</p>
                         </div>
                     </div>
-                    <div class="journey-step fade-in" data-delay="100">
+                    
+                    <div class="journey-step fade-in">
                         <div class="step-number">2</div>
-                        <div class="step-icon step2"><i class="fas fa-cogs"></i></div>
-                        <h4>البناء والتطوير الممنهج</h4>
+                        <div class="step-icon step2">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>البدء العملي</h4>
                         <div class="step-content">
                             <div class="step-section">
-                                <h5>الهدف:</h5>
-                                <p>بناء مسار تعليمي مخصص يعتمد على موهبتك الفطرية لتصبح خبيراً في مجالك.</p>
+                                <h5>مشاريع صغيرة</h5>
+                                <p>• ابدأ بمشروع بسيط في مجال اهتمامك<br>• شارك أعمالك مع الآخرين<br>• تعلم من التجربة والخطأ</p>
                             </div>
                             <div class="step-section">
-                                <h5>الأدوات:</h5>
-                                <p>برامج تعليمية عميقة، إرشاد شخصي من الخبراء، وتطبيق عملي لمشاريع واقعية.</p>
+                                <h5>التعلم بالممارسة</h5>
+                                <p>• ادرس من النماذج الناجحة<br>• ابحث عن مرشد أو مرشدة<br>• انضم لمجتمعات الممارسين</p>
                             </div>
-                            <p class="highlight">الخلاصة: **أنت الآن تبني مسارك الفريد!**</p>
                         </div>
                     </div>
-                    <div class="journey-step fade-in" data-delay="200">
+                    
+                    <div class="journey-step fade-in">
                         <div class="step-number">3</div>
-                        <div class="step-icon step3"><i class="fas fa-handshake"></i></div>
-                        <h4>الريادة وتغيير العالم</h4>
+                        <div class="step-icon step3">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>التعامل مع الظروف</h4>
                         <div class="step-content">
+                            <div class="highlight">ابدأ بالممكن والمتاح</div>
                             <div class="step-section">
-                                <h5>الهدف:</h5>
-                                <p>التحول إلى رائد أعمال أو قائد مبتكر، يقود الفرق ويساهم في حل تحديات مجتمعه الكبرى.</p>
+                                <h5>القدرة على التكيف</h5>
+                                <p>• استغل الموارد المتاحة<br>• كن مبدعاً في الحلول<br>• لا تنتظر الظروف المثالية</p>
                             </div>
                             <div class="step-section">
-                                <h5>الأدوات:</h5>
-                                <p>بناء شبكات احترافية، مهارات التفاوض، وتطوير الذكاء العاطفي للقيادة الفعالة.</p>
+                                <h5>عقلية النمو</h5>
+                                <p>• كل يوم فرصة للتطوير<br>• الفشل درس وليس نهاية<br>• التحسن التدريجي المستمر</p>
                             </div>
-                            <p class="highlight">الخلاصة: **أنت الآن تقود التغيير!**</p>
                         </div>
                     </div>
-                </div>
-                <div class="quote-section fade-in" data-delay="300">
-                    "إن سر النجاح هو أن تجد ما تحبه، ثم تدع القوة الكامنة بداخلك تقوم بالباقي."
                 </div>
             </div>
         </section>
 
         <section class="life-section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title">التأثير على مسار حياتك</h2>
-                    <p class="section-subtitle">اكتشاف الموهبة لا يغير مسارك المهني فقط، بل يغير جودة حياتك بالكامل.</p>
+                <div class="section-header">
+                    <h2 class="section-title">نحو حياة طيبة</h2>
+                    <p class="section-subtitle">البساطة والهدف في عالم معقد</p>
                 </div>
-
+                
                 <div class="life-grid">
                     <div class="life-column positive fade-in">
-                        <h4><i class="fas fa-heart"></i> الحياة بموهبتك (النتيجة الإيجابية)</h4>
+                        <h4><i class="fas fa-check-circle"></i> قواعد العيش البسيط</h4>
                         <ul>
-                            <li>الشعور بالهدف والمعنى (الرضا الوظيفي)</li>
-                            <li>زيادة الإنتاجية والإبداع</li>
-                            <li>تحسين الصحة النفسية والتقليل من التوتر</li>
-                            <li>الاستمتاع بالعمل كـ"لعب" أو "هواية"</li>
+                            <li>• فهم الأولويات والقيم</li>
+                            <li>• الحرية المالية</li>
+                            <li>• وقت أكثر لما يهم</li>
+                            <li>• تركيز على النمو الداخلي</li>
                         </ul>
                     </div>
-                    <div class="life-column negative fade-in" data-delay="100">
-                        <h4><i class="fas fa-times-circle"></i> الحياة بدون موهبتك (النتيجة السلبية)</h4>
+                    
+                    <div class="life-column negative fade-in">
+                        <h4><i class="fas fa-times-circle"></i> ثقافة الاستهلاك المدمرة</h4>
                         <ul>
-                            <li>الإحساس بالاحتراق الوظيفي والملل</li>
-                            <li>العمل من أجل المال فقط (فقدان الشغف)</li>
-                            <li>الجهد المضاعف والنتائج المتوسطة</li>
-                            <li>التنافس مع الروبوتات والذكاء الاصطناعي</li>
+                            <li>• السعي وراء المظاهر</li>
+                            <li>• تعريف النجاح بالممتلكات</li>
+                            <li>• فقدان الهدف والمعنى</li>
+                            <li>• الدين والضغط المالي</li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="success-message fade-in" data-delay="200">
-                    <i class="fas fa-check-circle"></i> النجاح ليس في أن تكون أفضل من الآخرين، بل في أن تكون أفضل نسخة منك.
+                
+                <div class="golden-summary fade-in">
+                    <h3>النجاح الحقيقي</h3>
+                    <p>النجاح الحقيقي لا يُقاس بحجم البنك أو الممتلكات، بل بمدى توافق عملك مع قيمك الشخصية وإسهامك الإيجابي في العالم من حولك.</p>
                 </div>
             </div>
         </section>
-
-        <section class="start-point-section">
+        
+        <section class="start-point-section fade-in">
             <div class="container">
-                <h2 class="fade-in">البداية الحقيقية: كيف تبدأ رحلة الإيقاظ؟</h2>
-                <p class="fade-in" data-delay="100">رحلتنا تبدأ بفهم معمق لقدراتك الفطرية التي خلقها الله فيك. لا يوجد مسار واحد يناسب الجميع. يجب أن تحدد **نقطة انطلاقك الخاصة** التي تتناسب مع ذكائك الفطري، وليس مجرد اتباع ما يتبعه الآخرون.</p>
+                <h2 style="color: #fde047;">✨ ابدأ من هنا: الشرارة الأولى</h2>
                 
-                <div class="call-to-action-line fade-in" data-delay="200">
-                    خطوتك الأولى هي **الإيقاظ**... وليس الحفظ!
-                </div>
+                <p>كل إنسان وُلد وفي داخله بوصلة صغيرة، تشير بصمت إلى معنى لا يشبه سواه.</p>
 
-                <div class="steps-container">
-                    <div class="visual-step fade-in">
-                        <div class="step-header">
-                            <div class="step-number-badge">1</div>
-                            <h3 class="step-title">الاختبار الموجه</h3>
-                        </div>
-                        <p>استخدم أدوات احترافية لاكتشاف الذكاءات المتعددة الأقوى لديك. لا تخمن، بل اعتمد على العلم.</p>
-                    </div>
-                    <div class="visual-step fade-in" data-delay="100">
-                        <div class="step-header">
-                            <div class="step-number-badge">2</div>
-                            <h3 class="step-title">بناء الخريطة</h3>
-                        </div>
-                        <p>ربط نتائج اختبارك بالوظائف والمسارات المهنية المستقبلية المحمية من الذكاء الاصطناعي.</p>
-                    </div>
-                    <div class="visual-step fade-in" data-delay="200">
-                        <div class="step-header">
-                            <div class="step-number-badge">3</div>
-                            <h3 class="step-title">الانطلاق والريادة</h3>
-                        </div>
-                        <p>وضع خطة عمل مفصلة، وبدء مشروعك الأول أو تطوير مهارة قيادية في مجالك المختار.</p>
-                    </div>
-                </div>
+                <p>لكن مع مرور الوقت، يغمرها غبار التوقعات، أصوات الناس، وسرعة الأيام…</p>
 
-                <div class="time-note fade-in" data-delay="300">
-                    **ملحوظة مهمة:** العالم لا ينتظر. إذا لم تبدأ رحلتك لاكتشاف موهبتك الفطرية الآن، فإن الذكاء الاصطناعي سيتولى المهام الروتينية التي كنت تأمل أن تحصل منها على وظيفة، وستجد نفسك متأخراً عن الركب. **حان الوقت للتغيير.**
-                </div>
+                <p>فتبدأ تشعر وكأنك تمشي في طريق تعرف أنه ليس طريقك، لكن لا تدري بعد أين المفترق الذي أضعت فيه الاتجاه.</p>
                 
-                <div class="summary-box fade-in" data-delay="400">
-                    الجيل القادم ليس بحاجة إلى مزيد من الموظفين، بل بحاجة إلى **مغيرين للعالم**.
+                <p>ربما تشعر بذلك الخيط الخفيف من القلق، ليس خوفًا من الفشل، بل من أن يمضي عمرك دون أن تكتشف لِمَ وُجدت.</p>
+
+                <p>وإن كنت تقرأ هذه الكلمات الآن، فربما هذا هو **النداء الأول** من ذاتك الحقيقية:</p>
+                <p style="text-align: center; font-size: 1.6rem; font-weight: 800; color: #f59e0b; margin: 2rem 0; text-shadow: 0 0 5px rgba(245, 158, 11, 0.6);">“انهض… لقد حان الوقت.”</p>
+                <p>الرحلة لا تحتاج إلى خطة مثالية، بل إلى خطوة واحدة صادقة. وسأريك كيف تبدأها الآن...</p>
+
+                <h3 data-icon="✍️">1. <span style="font-weight: 700;">اكتب ما يوقظ فضولك</span></h3>
+                <p>خذ ورقة أو افتح ملاحظات هاتفك، واكتب بلا تفكير:</p>
+                <p style="padding-right: 20px; border-right: 3px solid #ffcc80; margin-right: 20px; font-style: italic; font-size: 1.1rem; opacity: 0.9;">ما الأشياء التي أعود إليها دائمًا؟ ما المواضيع التي تستوقفني حتى وسط الانشغال؟</p>
+                <p>حين تكتبها، لا تراجعها ولا تبررها. دع قلبك يسبق قلمك، فالقلب يعرف الطريق قبل العقل بزمن. هذه ليست قائمة هوايات، بل **إشارات من موهبتك** وهي تحاول أن تُعرّفك بنفسها.</p>
+
+                <h3 data-icon="🌱">2. <span style="font-weight: 700;">اختبر فكرة هذا الأسبوع</span></h3>
+                <p>لا تنتظر الإلهام المثالي أو اللحظة المناسبة، فالموهبة لا تظهر تحت الضوء بل تُكتشف **بالحركة**.</p>
+                <p>اختر شيئًا بسيطًا — جرب، حتى لو كان صغيرًا إلى حد السذاجة. ارسم، صوّر، صمّم، اكتب، ساعد، شارك… المهم أن تفعل.</p>
+                <p>التجربة ليست اختبارًا للنجاح، بل طريقة لتذكير نفسك بأنك ما زلت حيًا وقادرًا على التشكّل. في كل محاولة، ستلمس جزءًا من حقيقتك التي نسيتها بين مشاغل الأيام.</p>
+
+                <h3 data-icon="📖">3. <span style="font-weight: 700;">دوّن رحلتك</span></h3>
+                <p>في نهاية كل أسبوع، خذ بضع دقائق واكتب ما شعرت به وما لاحظته. اكتب بصراحة: **ما الذي حركك؟ ما الذي أثارك؟ وما الذي أحبطك؟**</p>
+                <p>الكتابة هنا ليست توثيقًا، بل حديث صدق مع الذات. فبعد أسابيع قليلة، ستبدأ ترى خيوطًا تتكرر — خيوطًا تشكّل ملامح الطريق الذي يخصك أنت وحدك. وحين تنظر إلى الوراء، ستدرك أن التغيير لم يحدث فجأة، بل تَشكّل بهدوء بين سطور يومياتك.</p>
+
+                <div class="time-note">
+                    <strong>⏳ عن الوقت...</strong>
+                    <p>قد تقول لنفسك الآن: "ليس لدي وقت." "القطار فاتني." "بدأت متأخرًا…"</p>
+                    <p>لكن الحقيقة أن الوقت يمضي سواء بدأت أم لم تبدأ. السنة بأكملها يمكن أن تضيع دون خطوة واحدة، فما قيمة أسبوع من التجربة في مقابل أعوام من الانتظار؟ لا شيء يُذكر في ميزان الزمن، لكنه **كل شيء في ميزان التحوّل**.</p>
+                    <p>انظر للصورة الكبرى — خطّط للمدى البعيد بعقلٍ هادئ، خطّط كأنك تعيش أبداً، واعمل كأنك تموت غدًا.</p>
                 </div>
 
-                <a href="#" class="final-cta-button fade-in" data-delay="500">
-                    <i class="fas fa-hand-pointer"></i>
-                    انضم إلى مجتمع التغيير
-                </a>
+                <div class="summary-box">
+                    🌿 الخلاصة: اكتشاف الموهبة ليس وعدًا بنتيجة، بل التزام بالرحلة. وحين تبدأ — ولو بخطوة صغيرة جدًا — ستكتشف أن الطريق كان ينتظرك منذ زمن، وأن ما كنت تبحث عنه... كان يبحث عنك أيضًا.
+                </div>
+
             </div>
         </section>
+        <section class="final-section">
+            <div class="container">
+                <h2>بناء جيل يغير العالم</h2>
+                <p class="subtitle">مسؤولية جماعية تبدأ بخطوة فردية</p>
+                
+                <div class="section-header">
+                    <h3 class="section-title" style="color: white; font-size: 2rem;">دور المجتمع</h3>
+                </div>
+                
+                <div class="community-grid">
+                    <div class="community-item fade-in">
+                        <div class="community-icon">🏗️</div>
+                        <h4>صناع القرار</h4>
+                        <p>إعادة النظم التعليمية</p>
+                    </div>
+                    
+                    <div class="community-item fade-in">
+                        <div class="community-icon">👨‍🏫</div>
+                        <h4>المعلمون</h4>
+                        <p>تطبيق أساليب تعليمية متقدمة</p>
+                    </div>
+                    
+                    <div class="community-item fade-in">
+                        <div class="community-icon">👥</div>
+                        <h4>الآباء</h4>
+                        <p>دعم واكتشاف مواهب الأطفال</p>
+                    </div>
+                </div>
+                
+                <div class="quote-section fade-in">
+                    اسع يا عبدي وأنا أسعى معاك!
+                </div>
+                
+                <button class="final-cta-button" onclick="sharePage()">
+                    <i class="fas fa-share"></i>
+                    كن جزءاً من التغيير - شارك هذه الرؤية
+                </button>
+            </div>
+        </section>
+    </div>
 
-
-    </div> <footer class="footer">
+    <footer class="footer">
         <div class="container">
-            <h3>نحو جيل يغير العالم</h3>
-            <p>مشروع يهدف إلى تمكين الجيل العربي لاكتشاف مواهبه الفطرية والريادة في عصر الذكاء الاصطناعي.</p>
+            <h3>التغيير يبدأ من هنا</h3>
+            <p>رحلة الألف ميل تبدأ بخطوة واحدة</p>
+            <p class="quote">"اسع يا عبدي وأنا أسعى معاك!"</p>
             
             <div class="social-links">
-                <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/RiseEra47" title="Twitter / X (@RiseEra47)" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:riseera47@gmail.com" title="البريد الإلكتروني"><i class="fas fa-envelope"></i></a>
             </div>
-            
-            <p class="quote">"التعليم ليس ملء دلو، بل إشعال نار."</p>
-            <p style="font-size: 0.9rem; margin-top: 2rem;">&copy; 2024 جميع الحقوق محفوظة.</p>
         </div>
     </footer>
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const observer = new IntersectionObserver((entries) => {
+        // دالة المشاركة
+        async function sharePage() {
+            const shareData = {
+                title: 'نحو جيل يغير العالم',
+                text: 'اكتشف المواهب الفطرية واصنع مستقبلك الخاص!',
+                url: 'https://riseera47-spec.github.io/awaken-talents-/' // يرجى التأكد من أن هذا الرابط هو الصحيح
+            };
+
+            try {
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                } else {
+                    prompt('انسخ الرابط للمشاركة:', shareData.url);
+                }
+            } catch (err) {
+                console.log('فشل المشاركة', err);
+                prompt('انسخ الرابط للمشاركة:', shareData.url);
+            }
+        }
+
+        // Intersection Observer for animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const delay = parseInt(entry.target.getAttribute('data-delay')) || 0;
-                        setTimeout(() => {
-                            entry.target.classList.add('visible');
-                        }, delay);
+                        entry.target.classList.add('visible');
                     }
                 });
-            }, {
-                rootMargin: '0px',
-                threshold: 0.1 
-            });
-
-            document.querySelectorAll('.fade-in').forEach(element => {
-                observer.observe(element);
+            }, observerOptions);
+            
+            // Observe elements for animation
+            const elementsToAnimate = document.querySelectorAll('.fade-in');
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
             });
         });
     </script>
-
 </body>
 </html>
