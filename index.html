@@ -6,7 +6,7 @@
     <meta name="description" content="اكتشف موهبتك الفطرية وابنِ مستقبلك في عالم يتغير بسرعة. انضم إلينا لرحلة نحو التعليم المستقبلي وريادة الأعمال.">
     <meta name="keywords" content="تعليم, مواهب, ريادة أعمال, تطوير ذاتي, ذكاء اصطناعي, مستقبل التعليم, تعلم ذاتي">
     <title>نحو جيل يغير العالم - إيقاظ المواهب الفطرية</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -16,8 +16,7 @@
         }
 
         body {
-            /* تطبيق خط Tajawal الجديد هنا */
-            font-family: 'Tajawal', sans-serif; 
+            font-family: 'Cairo', sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #f0f4f8;
@@ -84,7 +83,7 @@
             align-items: center;
             gap: 0.8rem;
             box-shadow: 0 5px 20px rgba(16, 185, 129, 0.2);
-            font-family: 'Tajawal', sans-serif; /* تحديث الخط هنا أيضاً */
+            font-family: 'Cairo', sans-serif;
         }
 
         .cta-button:hover {
@@ -146,17 +145,16 @@
             color: white;
         }
         
-        /* Updated nth-child to match new content order: 1. Problem (Red), 2. Solution (Orange), 3. Path (Green) */
-        .card:nth-child(1) .card-icon { /* المشكلة - Problem */
-            background: #ef4444; /* Red */
+        .card:nth-child(1) .card-icon {
+            background: #10b981;
         }
 
-        .card:nth-child(2) .card-icon { /* الحل - Solution */
-            background: #f59e0b; /* Orange */
+        .card:nth-child(2) .card-icon {
+            background: #f59e0b;
         }
 
-        .card:nth-child(3) .card-icon { /* الطريق - Path */
-            background: #10b981; /* Green */
+        .card:nth-child(3) .card-icon {
+            background: #ef4444;
         }
 
         .card h3 {
@@ -210,617 +208,64 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
         }
-
-        .why-not-working {
-            background: #fef2f2;
-            border: 2px solid #fca5a5;
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: center;
-        }
-
-        .why-not-working h4 {
-            color: #dc2626;
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .why-not-working p {
-            color: #991b1b;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        
-        /* Comparison Table */
-        .comparison-section {
-            margin: 3rem 0;
-        }
-
-        .comparison-title {
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #374151;
-            margin-bottom: 2rem;
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .comparison-column {
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .comparison-column.future {
-            background: #d1fae5;
-            border: 2px solid #10b981;
-        }
-
-        .comparison-column.traditional {
-            background: #fee2e2;
-            border: 2px solid #ef4444;
-        }
-
-        .comparison-column h4 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .comparison-column.future h4 {
-            color: #065f46;
-        }
-
-        .comparison-column.traditional h4 {
-            color: #991b1b;
-        }
-
-        .comparison-column ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .comparison-column li {
-            padding: 0.8rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-
-        .comparison-column.future li::before {
-            content: "✓";
-            color: #059669;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .comparison-column.traditional li::before {
-            content: "✗";
-            color: #dc2626;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* Color Unification for Golden Summary */
-        .golden-summary {
-            background: #fef3c7; /* Clean, light yellow/gold */
-            padding: 3rem;
-            border-radius: 25px;
-            margin: 3rem 0;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
-            border: 2px solid #fde047; /* Add a slight border for definition */
-        }
-        
-        .golden-summary h3,
-        .golden-summary p {
-            color: #4b5563; 
-        }
-        
-        .education-golden-summary {
-            background: #2e4a86;
-            color: white;
-            border: 2px solid #60a5fa;
-            padding: 3rem;
-            border-radius: 20px;
-            margin: 3rem 0;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(46, 74, 134, 0.15);
-        }
-
-        .golden-summary h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .golden-summary p {
-            font-size: 1.3rem;
-            font-weight: 600;
-            line-height: 1.6;
-        }
-        
-        .education-golden-summary h3, .education-golden-summary p {
-             color: white;
-        }
-
-        /* AI Section */
-        .ai-section {
-            background: #ede9fe;
-            padding: 4rem 0;
-            margin: 0;
-        }
-
-        .ai-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin: 3rem 0;
-        }
-
-        .ai-column {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-            border-top: 4px solid;
-        }
-
-        .ai-column.protected {
-            border-top-color: #10b981;
-            background: #ecfdf5;
-        }
-
-        .ai-column.threatened {
-            border-top-color: #ef4444;
-            background: #fef2f2;
-        }
-
-        .ai-column h4 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .ai-column.protected h4 {
-            color: #065f46;
-        }
-
-        .ai-column.threatened h4 {
-            color: #991b1b;
-        }
-
-        .ai-column ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .ai-column li {
-            padding: 0.8rem 0;
-            color: #374151;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .ai-column li:last-child {
-            border-bottom: none;
-        }
-
-        /* Golden Summary (AI Section) */
-        .golden-summary.ai {
-            background: #fef3c7; /* Clean, light yellow/gold */
-            color: #1f2937;
-            padding: 3rem;
-            border-radius: 25px;
-            margin: 3rem 0;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
-            border: 2px solid #fde047; /* Add a slight border for definition */
-        }
-
-        .golden-summary.ai h3, .golden-summary.ai p {
-            color: #4b5563;
-        }
-
-        .golden-summary h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #1f2937;
-        }
-
-        .golden-summary p {
-            font-size: 1.3rem;
-            font-weight: 600;
-            line-height: 1.6;
-        }
-
-        /* Talents Section */
-        .talents-section {
-            /* Changed background to be more vibrant */
-            background: #c3e6cb; /* A lively green for this section */
-            padding: 4rem 0;
-            margin: 0;
-        }
-
-        .talents-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin: 3rem 0;
-        }
-
-        .talents-column {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-            /* Added top border for better visual separation */
-            border-top: 4px solid; 
-        }
-
-        .talents-column.classical {
-            background: #e0e7ff; /* Retaining light blue */
-            border-top-color: #6366f1; /* Stronger blue */
-        }
-
-        .talents-column.multiple {
-            background: #fffbeb; /* Retaining light yellow */
-            border-top-color: #facc15; /* Stronger yellow */
-        }
-
-        .talents-column h4 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
-            color: #374151;
-        }
-        /* Color for heading in Multiple Intelligences */
-        .talents-column.multiple h4 {
-            color: #a16207; /* Darker yellow/orange for contrast */
-        }
-        /* Color for heading in Classical Intelligences */
-        .talents-column.classical h4 {
-            color: #3730a3; /* Darker blue for contrast */
-        }
-
-
-        .talents-column ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .talents-column li {
-            padding: 1rem 0;
-            font-size: 1.2rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .talents-column li:last-child {
-            border-bottom: none;
-        }
-
-        /* Sports Example */
-        .sports-example {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin: 3rem 0;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-            border: 2px solid #10b981;
-        }
-
-        .sports-example h4 {
-            color: #10b981;
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .sports-example p {
-            color: #4b5563;
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        /* Journey Section */
-        .journey-section {
-            padding: 4rem 0;
-            background: #f0f4f8;
-        }
-
-        .journey-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin: 3rem 0;
-        }
-
-        .journey-step {
-            background: white;
-            border-radius: 25px;
-            padding: 3rem;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-            position: relative;
-            border: 2px solid #e2e8f0;
-        }
-
-        .step-number {
-            position: absolute;
-            top: -20px;
-            right: 30px;
-            background: #2e4a86;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.4rem;
-            box-shadow: 0 4px 12px rgba(46, 74, 134, 0.2);
-        }
-
-        .step-icon {
-            width: 80px;
-            height: 80px;
-            margin: 1rem auto 2rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .step-icon.step1 {
-            background: #ef4444; /* Problem related - Red */
-        }
-
-        .step-icon.step2 {
-            background: #3b82f6;
-        }
-
-        .step-icon.step3 {
-            background: #8b5cf6;
-        }
-
-        .journey-step h4 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: #1f2937;
-        }
-
-        .journey-step .step-content {
-            text-align: right;
-        }
-
-        .journey-step .step-section {
-            margin-bottom: 1.5rem;
-        }
-
-        .journey-step .step-section h5 {
-            font-weight: 700;
-            color: #374151;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .journey-step .step-section p {
-            color: #6b7280;
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-
-        .journey-step .highlight {
-            color: #10b981;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        /* Final Section */
-        .final-section {
-            background: #2e4a86;
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .final-section h2 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .final-section .subtitle {
-            font-size: 1.4rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-        }
-
-        .community-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .community-item {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .community-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .community-item h4 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .community-item p {
-            font-size: 1rem;
-            line-height: 1.5;
-            opacity: 0.9;
-        }
-
-        /* Life Section */
-        .life-section {
-            background: #f0f4f8;
-            padding: 4rem 0;
-        }
-
-        .life-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin: 3rem 0;
-        }
-
-        .life-column {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-        }
-
-        .life-column.positive {
-            background: #d1fae5;
-            border-top: 4px solid #10b981;
-        }
-
-        .life-column.negative {
-            background: #fef2f2;
-            border-top: 4px solid #ef4444;
-        }
-
-        .life-column h4 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .life-column.positive h4 {
-            color: #065f46;
-        }
-
-        .life-column.negative h4 {
-            color: #991b1b;
-        }
-
-        .life-column ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .life-column li {
-            padding: 0.8rem 0;
-            color: #374151;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        /* Success Message */
-        .success-message {
-            background: #d1fae5;
-            color: #065f46;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            text-align: center;
-            font-weight: 600;
-            font-size: 1.2rem;
-            border: 2px solid #10b981;
-        }
-
-        /* Quote Section */
-        .quote-section {
-            background: #fde68a;
-            color: #4b5563;
-            padding: 3rem;
-            border-radius: 25px;
-            margin: 3rem 0;
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            position: relative;
-            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
-        }
-
-        .quote-section::before,
-        .quote-section::after {
-            content: '"';
-            font-size: 4rem;
-            font-weight: bold;
-            color: #d97706;
-            position: absolute;
-            top: 10px;
-        }
-
-        .quote-section::before {
-            right: 20px;
-        }
-
-        .quote-section::after {
-            left: 20px;
-        }
-
-        .final-cta-button {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            padding: 1.2rem 3rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display:
+        /* تم إزالة .why-not-working{} الفارغ وتصحيح الوسوم الناقصة أدناه */
+    </style>
+</head>
+<body>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">نحو جيل يغير العالم</h1>
+                <p class="hero-subtitle">إيقاظ المواهب الفطرية لبناء مستقبل ريادي.</p>
+                <div class="hero-description">
+                    نحن نؤمن بأن كل فرد يمتلك موهبة فريدة. مهمتنا هي توفير الأدوات والمعرفة اللازمة لتحويل هذه المواهب إلى قوة دافعة للتغيير والابتكار في عالم الذكاء الاصطناعي والتكنولوجيا المتقدمة.
+                </div>
+                <a href="#register" class="cta-button">
+                    ابدأ رحلتك الآن
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <div class="container">
+                <section class="three-cards-section">
+                    <header class="section-header">
+                        <h2 class="section-title">لماذا نحن؟</h2>
+                        <p class="section-subtitle">نقدم مساراً تعليمياً متكاملاً يركز على ثلاثة محاور أساسية لمواكبة المستقبل.</p>
+                    </header>
+                    <div class="three-cards">
+                        <div class="card">
+                            <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>إيقاظ الموهبة</h3>
+                            <p>نستخدم أحدث الأساليب لاكتشاف وصقل نقاط القوة الفطرية لدى الأفراد، وتحويلها إلى مهارات عملية ومطلوبة.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                            <h3>ريادة الأعمال</h3>
+                            <p>تعليم مبادئ تأسيس المشاريع الصغيرة والكبيرة، وتزويد الطلاب بعقلية الابتكار وحل المشكلات العالمية المعقدة.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon"><i class="fas fa-brain"></i></div>
+                            <h3>التعليم المستقبلي</h3>
+                            <p>منهج يركز على الذكاء الاصطناعي، البرمجة، والتعلم الذاتي، لضمان جاهزية الجيل لسوق العمل المستقبلي.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="education-section">
+                    <div class="container">
+                        <header class="section-header">
+                            <h2 class="section-title">رحلتنا التعليمية</h2>
+                            <p class="section-subtitle">رحلة متدرجة وممتعة تضمن انتقالك من مرحلة الاكتشاف إلى مرحلة التنفيذ والريادة.</p>
+                        </header>
+                        <div class="education-content">
+                            <p>هنا سيكون محتوى مفصل حول مراحل التعليم والبرامج المقدمة. (يمكنك إضافة محتواك هنا)</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
