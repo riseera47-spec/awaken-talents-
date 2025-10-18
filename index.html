@@ -837,109 +837,148 @@
 
         /* NEW CSS: Start Point Section - DESIGN ENHANCEMENTS APPLIED HERE */
         .start-point-section {
-            background: #364e7c; /* Darker blue for depth */
-            padding: 4rem 0;
+            background: #1f2937; /* Deep Charcoal Blue */
+            padding: 6rem 0; /* More vertical space */
             text-align: right; 
-            color: white;
-            /* Subtle texture/gradient for depth */
-            background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.1) 100%);
+            color: #f8f8f8;
+            /* Subtle dark noise pattern for texture */
+            background-image: radial-gradient(circle at 100% 150%, #2e3e50 0%, #1f2937 80%, #1f2937 100%); 
         }
         
         .start-point-section h2 {
-            font-size: 2.8rem; /* Slightly larger */
-            font-weight: 800; /* Bolder */
-            margin-bottom: 1.5rem;
+            font-size: 3.5rem; /* Massive title */
+            font-weight: 900; 
+            margin-bottom: 2rem;
             text-align: center;
-            border-bottom: 3px solid #fde047; /* Gold separator line */
             padding-bottom: 10px;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto 3rem;
-            color: #fde047; /* Gold color for the title */
-            /* Text shadow for a 'glow' effect */
-            text-shadow: 0 0 10px rgba(253, 224, 71, 0.5); 
-        }
-
-        /* New Style for Step H3 (making the icon a distinct badge) */
-        .start-point-section h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-            color: white; 
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding-bottom: 5px;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.3); /* Subtle separator */
+            color: #ffcc00; /* Rich Gold color for the title */
+            /* Stronger Text Glow */
+            text-shadow: 0 0 20px rgba(255, 204, 0, 0.7), 0 0 5px rgba(255, 204, 0, 0.3); 
+            line-height: 1.2;
         }
         
-        /* Styling the emoji/icon within H3 to look like a gold badge */
-        .start-point-section h3::before {
-            content: attr(data-icon); /* Use an attribute for content if needed, but for Emojis we style the whole H3 */
-            background-color: #fde047; /* Gold background */
-            color: #364e7c; /* Dark text/emoji color */
-            padding: 8px 15px;
-            border-radius: 8px;
-            font-size: 1.4rem;
-            line-height: 1;
-            font-weight: 900;
-            box-shadow: 0 0 15px rgba(253, 224, 71, 0.4);
-        }
-        /* Override the 'h3' style to allow emojis inside to be the badge */
-        .start-point-section h3 {
-            /* Reset the default emoji position */
-            display: block; 
-            color: #fde047;
-            font-size: 1.8rem; /* Make the number/icon larger within the H3 */
+        .start-point-section > p {
+            font-size: 1.4rem; 
+            max-width: 900px;
+            margin: 1.5rem auto; 
+            opacity: 0.9;
+            line-height: 2.2; /* Excellent line height for Arabic readability */
+            text-align: center; /* Center the introduction paragraph */
         }
         
-        /* The actual step text that follows the number/icon */
-        .start-point-section h3 span {
-            color: white;
-            font-size: 1.6rem;
-            font-weight: 700;
-        }
-
-
-        .start-point-section p {
-            font-size: 1.2rem; /* Slightly larger body text */
-            max-width: 100%;
-            margin-bottom: 1.8rem; /* More space between paragraphs */
-            opacity: 0.98;
-            line-height: 2; /* Increased line height for better readability (The Arabic line-height is crucial) */
-        }
-
         .start-point-section strong {
             font-weight: 800;
-            color: #ffcc80; /* Lighter Orange/Peach for strong emphasis */
+            color: #90ee90; /* Light Green for emphasis on core concepts */
+        }
+        
+        .start-point-section .call-to-action-line {
+            text-align: center; 
+            font-size: 1.8rem; 
+            font-weight: 800; 
+            color: #f59e0b; /* Orange emphasis */
+            margin: 3rem 0; 
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05); /* Subtle background for the CTA line */
+            border-radius: 10px;
+            border-top: 2px solid #f59e0b;
         }
 
-        .start-point-section .time-note {
-            background: rgba(255, 255, 255, 0.15); /* Slightly lighter transparent background */
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 4rem 0; /* More margin to separate it */
-            border-right: 5px solid #ef4444;
-            font-style: italic;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+        /* NEW: Visual Steps Structure */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .visual-step {
+            background: rgba(255, 255, 255, 0.08); /* Light box on dark background */
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .visual-step:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-number-badge {
+            background: #ffcc00; /* Gold */
+            color: #1f2937; /* Dark text */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 900;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.4;
+        }
+        
+        .visual-step p {
             font-size: 1.15rem;
+            line-height: 1.9;
+            opacity: 0.9;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Time Note - The Warning Box */
+        .start-point-section .time-note {
+            background: #2b3b4d; /* Slightly different dark shade */
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 5rem auto; 
+            border: 2px solid #ef4444; /* Strong Red Border */
+            font-style: italic;
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.5); /* Red Glow */
+            font-size: 1.3rem;
+            max-width: 900px;
+            text-align: center;
+            line-height: 2;
         }
         
         .start-point-section .time-note strong {
-             color: #ef4444; /* Red color for the time heading */
+             color: #fca5a5; /* Light Red color for emphasis inside */
+             font-weight: 800;
         }
         
         .start-point-section .summary-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
+            background: #2e4a86; /* Blue to connect back to the hero section */
+            padding: 3rem;
             border-radius: 15px;
-            margin-top: 3rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 4rem;
+            border: 1px solid #60a5fa;
             text-align: center;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #a7f3d0; /* Soft green color for the conclusion */
+            max-width: 900px;
+            margin: 4rem auto 0;
+            line-height: 1.8;
         }
+
 
         /* Footer */
         .footer {
@@ -1004,7 +1043,8 @@
             .comparison-grid,
             .ai-grid,
             .talents-grid,
-            .life-grid {
+            .life-grid,
+            .steps-container {
                 grid-template-columns: 1fr;
             }
 
@@ -1023,7 +1063,7 @@
             
             /* FIX: Increased container padding for better mobile spacing */
             .container {
-                padding: 0 2rem; 
+                padding: 0 1.5rem; 
             }
             
             .start-point-section h2 {
@@ -1373,43 +1413,58 @@
         
         <section class="start-point-section fade-in">
             <div class="container">
-                <h2 style="color: #fde047;">✨ ابدأ من هنا: الشرارة الأولى</h2>
+                <h2 style="color: #ffcc00;">✨ ابدأ من هنا: الشرارة الأولى</h2>
                 
-                <p>كل إنسان وُلد وفي داخله بوصلة صغيرة، تشير بصمت إلى معنى لا يشبه سواه.</p>
-
-                <p>لكن مع مرور الوقت، يغمرها غبار التوقعات، أصوات الناس، وسرعة الأيام…</p>
+                <p>كل إنسان وُلد وفي داخله بوصلة صغيرة، تشير بصمت إلى معنى لا يشبه سواه. لكن مع مرور الوقت، يغمرها غبار التوقعات، أصوات الناس، وسرعة الأيام…</p>
 
                 <p>فتبدأ تشعر وكأنك تمشي في طريق تعرف أنه ليس طريقك، لكن لا تدري بعد أين المفترق الذي أضعت فيه الاتجاه.</p>
-                
-                <p>ربما تشعر بذلك الخيط الخفيف من القلق، ليس خوفًا من الفشل، بل من أن يمضي عمرك دون أن تكتشف لِمَ وُجدت.</p>
 
                 <p>وإن كنت تقرأ هذه الكلمات الآن، فربما هذا هو **النداء الأول** من ذاتك الحقيقية:</p>
-                <p style="text-align: center; font-size: 1.6rem; font-weight: 800; color: #f59e0b; margin: 2rem 0; text-shadow: 0 0 5px rgba(245, 158, 11, 0.6);">“انهض… لقد حان الوقت.”</p>
-                <p>الرحلة لا تحتاج إلى خطة مثالية، بل إلى خطوة واحدة صادقة. وسأريك كيف تبدأها الآن...</p>
+                
+                <div class="call-to-action-line">
+                    “انهض… لقد حان وقت اكتشاف موهبتك.”
+                </div>
+                <p>الرحلة لا تحتاج إلى خطة مثالية، بل إلى خطوة واحدة صادقة. اتبع هذه الخطوات للبدء:</p>
 
-                <h3 data-icon="✍️">1. <span style="font-weight: 700;">اكتب ما يوقظ فضولك</span></h3>
-                <p>خذ ورقة أو افتح ملاحظات هاتفك، واكتب بلا تفكير:</p>
-                <p style="padding-right: 20px; border-right: 3px solid #ffcc80; margin-right: 20px; font-style: italic; font-size: 1.1rem; opacity: 0.9;">ما الأشياء التي أعود إليها دائمًا؟ ما المواضيع التي تستوقفني حتى وسط الانشغال؟</p>
-                <p>حين تكتبها، لا تراجعها ولا تبررها. دع قلبك يسبق قلمك، فالقلب يعرف الطريق قبل العقل بزمن. هذه ليست قائمة هوايات، بل **إشارات من موهبتك** وهي تحاول أن تُعرّفك بنفسها.</p>
+                <div class="steps-container">
+                    <div class="visual-step">
+                        <div class="step-header">
+                            <div class="step-number-badge">1</div>
+                            <h3 class="step-title">اكتب ما يوقظ فضولك</h3>
+                        </div>
+                        <p>خذ ورقة أو افتح ملاحظات هاتفك، واكتب بلا تفكير: **ما الأشياء التي أعود إليها دائمًا؟** ما المواضيع التي تستوقفني حتى وسط الانشغال؟</p>
+                        <p style="border-right: 3px solid #ffcc00; padding-right: 15px; margin-right: 10px; font-style: italic; opacity: 0.8;">هذه ليست قائمة هوايات، بل إشارات من موهبتك وهي تحاول أن تُعرّفك بنفسها.</p>
+                    </div>
 
-                <h3 data-icon="🌱">2. <span style="font-weight: 700;">اختبر فكرة هذا الأسبوع</span></h3>
-                <p>لا تنتظر الإلهام المثالي أو اللحظة المناسبة، فالموهبة لا تظهر تحت الضوء بل تُكتشف **بالحركة**.</p>
-                <p>اختر شيئًا بسيطًا — جرب، حتى لو كان صغيرًا إلى حد السذاجة. ارسم، صوّر، صمّم، اكتب، ساعد، شارك… المهم أن تفعل.</p>
-                <p>التجربة ليست اختبارًا للنجاح، بل طريقة لتذكير نفسك بأنك ما زلت حيًا وقادرًا على التشكّل. في كل محاولة، ستلمس جزءًا من حقيقتك التي نسيتها بين مشاغل الأيام.</p>
+                    <div class="visual-step">
+                        <div class="step-header">
+                            <div class="step-number-badge">2</div>
+                            <h3 class="step-title">اختبر فكرة هذا الأسبوع</h3>
+                        </div>
+                        <p>لا تنتظر اللحظة المناسبة، فالموهبة تُكتشف **بالحركة** وليس تحت الضوء. اختر شيئًا بسيطًا — ارسم، صوّر، صمّم، اكتب، ساعد.</p>
+                        <p style="border-right: 3px solid #ffcc00; padding-right: 15px; margin-right: 10px; font-style: italic; opacity: 0.8;">التجربة ليست اختبارًا للنجاح، بل طريقة لتذكير نفسك بأنك ما زلت حيًا وقادرًا على التشكّل.</p>
+                    </div>
 
-                <h3 data-icon="📖">3. <span style="font-weight: 700;">دوّن رحلتك</span></h3>
-                <p>في نهاية كل أسبوع، خذ بضع دقائق واكتب ما شعرت به وما لاحظته. اكتب بصراحة: **ما الذي حركك؟ ما الذي أثارك؟ وما الذي أحبطك؟**</p>
-                <p>الكتابة هنا ليست توثيقًا، بل حديث صدق مع الذات. فبعد أسابيع قليلة، ستبدأ ترى خيوطًا تتكرر — خيوطًا تشكّل ملامح الطريق الذي يخصك أنت وحدك. وحين تنظر إلى الوراء، ستدرك أن التغيير لم يحدث فجأة، بل تَشكّل بهدوء بين سطور يومياتك.</p>
+                    <div class="visual-step">
+                        <div class="step-header">
+                            <div class="step-number-badge">3</div>
+                            <h3 class="step-title">دوّن رحلتك</h3>
+                        </div>
+                        <p>في نهاية كل أسبوع، اكتب بصراحة: **ما الذي حركك؟ وما الذي أحبطك؟** لا تكتب توثيقاً بل حديث صدق مع الذات.</p>
+                        <p style="border-right: 3px solid #ffcc00; padding-right: 15px; margin-right: 10px; font-style: italic; opacity: 0.8;">بعد أسابيع قليلة، ستبدأ ترى خيوطًا تشكّل ملامح الطريق الذي يخصك أنت وحدك.</p>
+                    </div>
+                </div>
+
 
                 <div class="time-note">
-                    <strong>⏳ عن الوقت...</strong>
-                    <p>قد تقول لنفسك الآن: "ليس لدي وقت." "القطار فاتني." "بدأت متأخرًا…"</p>
-                    <p>لكن الحقيقة أن الوقت يمضي سواء بدأت أم لم تبدأ. السنة بأكملها يمكن أن تضيع دون خطوة واحدة، فما قيمة أسبوع من التجربة في مقابل أعوام من الانتظار؟ لا شيء يُذكر في ميزان الزمن، لكنه **كل شيء في ميزان التحوّل**.</p>
-                    <p>انظر للصورة الكبرى — خطّط للمدى البعيد بعقلٍ هادئ، خطّط كأنك تعيش أبداً، واعمل كأنك تموت غدًا.</p>
+                    <strong>⚠️ تذكير عاجل: عن الوقت...</strong>
+                    <p>قد تقول: "ليس لدي وقت." "القطار فاتني." لكن الحقيقة أن **الوقت يمضي سواء بدأت أم لم تبدأ**.</p>
+                    <p>لا شيء يُذكر في ميزان الزمن يضيع في أسبوع من التجربة، لكنه **كل شيء في ميزان التحوّل**.</p>
+                    <p>انظر للصورة الكبرى — خطّط للمدى البعيد بعقلٍ هادئ، واعمل كأنك تموت غدًا.</p>
                 </div>
 
                 <div class="summary-box">
-                    🌿 الخلاصة: اكتشاف الموهبة ليس وعدًا بنتيجة، بل التزام بالرحلة. وحين تبدأ — ولو بخطوة صغيرة جدًا — ستكتشف أن الطريق كان ينتظرك منذ زمن، وأن ما كنت تبحث عنه... كان يبحث عنك أيضًا.
+                    🌿 الخلاصة: اكتشاف الموهبة ليس وعدًا بنتيجة، بل التزام بالرحلة. وحين تبدأ — ولو بخطوة صغيرة — ستكتشف أن ما كنت تبحث عنه... كان يبحث عنك أيضًا.
                 </div>
 
             </div>
