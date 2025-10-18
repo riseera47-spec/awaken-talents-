@@ -20,55 +20,6 @@
             line-height: 1.6;
             color: #333;
             background-color: #f0f4f8;
-            padding-top: 5rem; /* مساحة لرأس الصفحة الثابت */
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Header & Navigation */
-        .main-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            padding: 1rem 0;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #2e4a86;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #4b5563;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #4a69ad;
         }
 
         /* Hero Section */
@@ -81,7 +32,7 @@
             text-align: center;
             color: white;
             position: relative;
-            padding: 4rem 2rem 2rem; /* تم زيادة المساحة العلوية لاستيعاب الهيدر */
+            padding: 2rem;
         }
 
         .hero-content {
@@ -146,6 +97,12 @@
             background: #f0f4f8;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
         /* Three Cards Section */
         .three-cards-section {
             padding: 4rem 0;
@@ -188,16 +145,17 @@
             color: white;
         }
         
-        .card:nth-child(1) .card-icon {
-            background: #10b981;
+        /* Updated nth-child to match new content order: 1. Problem (Red), 2. Solution (Orange), 3. Path (Green) */
+        .card:nth-child(1) .card-icon { /* المشكلة - Problem */
+            background: #ef4444; /* Red */
         }
 
-        .card:nth-child(2) .card-icon {
-            background: #f59e0b;
+        .card:nth-child(2) .card-icon { /* الحل - Solution */
+            background: #f59e0b; /* Orange */
         }
 
-        .card:nth-child(3) .card-icon {
-            background: #ef4444;
+        .card:nth-child(3) .card-icon { /* الطريق - Path */
+            background: #10b981; /* Green */
         }
 
         .card h3 {
@@ -251,184 +209,1184 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
         }
-        
-        .timeline-item {
+
+        .why-not-working {
+            background: #fef2f2;
+            border: 2px solid #fca5a5;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .why-not-working h4 {
+            color: #dc2626;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
             display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .why-not-working p {
+            color: #991b1b;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Comparison Table */
+        .comparison-section {
+            margin: 3rem 0;
+        }
+
+        .comparison-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #374151;
             margin-bottom: 2rem;
-            align-items: flex-start;
-            text-align: right;
-            border-right: 4px solid #4a69ad;
-            padding-right: 2rem;
-            position: relative;
         }
-        
-        .timeline-item:last-child {
-            margin-bottom: 0;
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
         }
-        
-        .timeline-item h4 {
+
+        .comparison-column {
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .comparison-column.future {
+            background: #d1fae5;
+            border: 2px solid #10b981;
+        }
+
+        .comparison-column.traditional {
+            background: #fee2e2;
+            border: 2px solid #ef4444;
+        }
+
+        .comparison-column h4 {
             font-size: 1.5rem;
-            color: #2e4a86;
-            margin-bottom: 0.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .comparison-column.future h4 {
+            color: #065f46;
+        }
+
+        .comparison-column.traditional h4 {
+            color: #991b1b;
+        }
+
+        .comparison-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-column li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .comparison-column.future li::before {
+            content: "✓";
+            color: #059669;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .comparison-column.traditional li::before {
+            content: "✗";
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Color Unification for Golden Summary */
+        .golden-summary {
+            background: #fef3c7; /* Clean, light yellow/gold */
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
+            border: 2px solid #fde047; /* Add a slight border for definition */
         }
         
-        .timeline-item p {
+        .golden-summary h3,
+        .golden-summary p {
+            color: #4b5563; 
+        }
+        
+        .education-golden-summary {
+            background: #2e4a86;
+            color: white;
+            border: 2px solid #60a5fa;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(46, 74, 134, 0.15);
+        }
+
+        .golden-summary h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .golden-summary p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        
+        .education-golden-summary h3, .education-golden-summary p {
+             color: white;
+        }
+
+        /* AI Section */
+        .ai-section {
+            background: #ede9fe;
+            padding: 4rem 0;
+            margin: 0;
+        }
+
+        .ai-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .ai-column {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid;
+        }
+
+        .ai-column.protected {
+            border-top-color: #10b981;
+            background: #ecfdf5;
+        }
+
+        .ai-column.threatened {
+            border-top-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .ai-column h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .ai-column.protected h4 {
+            color: #065f46;
+        }
+
+        .ai-column.threatened h4 {
+            color: #991b1b;
+        }
+
+        .ai-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ai-column li {
+            padding: 0.8rem 0;
+            color: #374151;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .ai-column li:last-child {
+            border-bottom: none;
+        }
+
+        /* Golden Summary (AI Section) */
+        .golden-summary.ai {
+            background: #fef3c7; /* Clean, light yellow/gold */
+            color: #1f2937;
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
+            border: 2px solid #fde047; /* Add a slight border for definition */
+        }
+
+        .golden-summary.ai h3, .golden-summary.ai p {
             color: #4b5563;
         }
-        
-        .timeline-dot {
+
+        .golden-summary h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .golden-summary p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /* Talents Section */
+        .talents-section {
+            /* Changed background to be more vibrant */
+            background: #c3e6cb; /* A lively green for this section */
+            padding: 4rem 0;
+            margin: 0;
+        }
+
+        .talents-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .talents-column {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            /* Added top border for better visual separation */
+            border-top: 4px solid; 
+        }
+
+        .talents-column.classical {
+            background: #e0e7ff; /* Retaining light blue */
+            border-top-color: #6366f1; /* Stronger blue */
+        }
+
+        .talents-column.multiple {
+            background: #fffbeb; /* Retaining light yellow */
+            border-top-color: #facc15; /* Stronger yellow */
+        }
+
+        .talents-column h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #374151;
+        }
+        /* Color for heading in Multiple Intelligences */
+        .talents-column.multiple h4 {
+            color: #a16207; /* Darker yellow/orange for contrast */
+        }
+        /* Color for heading in Classical Intelligences */
+        .talents-column.classical h4 {
+            color: #3730a3; /* Darker blue for contrast */
+        }
+
+
+        .talents-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .talents-column li {
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .talents-column li:last-child {
+            border-bottom: none;
+        }
+
+        /* Sports Example */
+        .sports-example {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            border: 2px solid #10b981;
+        }
+
+        .sports-example h4 {
+            color: #10b981;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .sports-example p {
+            color: #4b5563;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Journey Section */
+        .journey-section {
+            padding: 4rem 0;
+            background: #f0f4f8;
+        }
+
+        .journey-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .journey-step {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border: 2px solid #e2e8f0;
+        }
+
+        .step-number {
             position: absolute;
-            right: -10px;
-            top: 5px;
-            width: 20px;
-            height: 20px;
-            background: #4a69ad;
+            top: -20px;
+            right: 30px;
+            background: #2e4a86;
+            color: white;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            border: 3px solid #e3f2fd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 12px rgba(46, 74, 134, 0.2);
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            margin: 1rem auto 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .step-icon.step1 {
+            background: #ef4444; /* Problem related - Red */
+        }
+
+        .step-icon.step2 {
+            background: #3b82f6;
+        }
+
+        .step-icon.step3 {
+            background: #8b5cf6;
+        }
+
+        .journey-step h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+
+        .journey-step .step-content {
+            text-align: right;
+        }
+
+        .journey-step .step-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .journey-step .step-section h5 {
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .journey-step .step-section p {
+            color: #6b7280;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .journey-step .highlight {
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Final Section */
+        .final-section {
+            background: #2e4a86;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .final-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .final-section .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .community-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .community-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .community-item h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .community-item p {
+            font-size: 1rem;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        /* Life Section */
+        .life-section {
+            background: #f0f4f8;
+            padding: 4rem 0;
+        }
+
+        .life-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .life-column {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .life-column.positive {
+            background: #d1fae5;
+            border-top: 4px solid #10b981;
+        }
+
+        .life-column.negative {
+            background: #fef2f2;
+            border-top: 4px solid #ef4444;
+        }
+
+        .life-column h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .life-column.positive h4 {
+            color: #065f46;
+        }
+
+        .life-column.negative h4 {
+            color: #991b1b;
+        }
+
+        .life-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .life-column li {
+            padding: 0.8rem 0;
+            color: #374151;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border: 2px solid #10b981;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: #fde68a;
+            color: #4b5563;
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 3rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.15);
+        }
+
+        .quote-section::before,
+        .quote-section::after {
+            content: '"';
+            font-size: 4rem;
+            font-weight: bold;
+            color: #d97706;
+            position: absolute;
+            top: 10px;
+        }
+
+        .quote-section::before {
+            right: 20px;
+        }
+
+        .quote-section::after {
+            left: 20px;
+        }
+
+        .final-cta-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.2);
+            font-family: 'Cairo', sans-serif;
+            margin-top: 2rem;
+        }
+
+        .final-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        /* NEW CSS: Start Point Section - DESIGN ENHANCEMENTS APPLIED HERE */
+        .start-point-section {
+            background: #364e7c; /* Darker blue for depth */
+            padding: 4rem 0;
+            text-align: right; 
+            color: white;
+            /* Subtle texture/gradient for depth */
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.1) 100%);
         }
         
+        .start-point-section h2 {
+            font-size: 2.8rem; /* Slightly larger */
+            font-weight: 800; /* Bolder */
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-bottom: 3px solid #fde047; /* Gold separator line */
+            padding-bottom: 10px;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color: #fde047; /* Gold color for the title */
+            /* Text shadow for a 'glow' effect */
+            text-shadow: 0 0 10px rgba(253, 224, 71, 0.5); 
+        }
+
+        /* New Style for Step H3 (making the icon a distinct badge) */
+        .start-point-section h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: white; 
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3); /* Subtle separator */
+        }
+        
+        /* Styling the emoji/icon within H3 to look like a gold badge */
+        .start-point-section h3::before {
+            content: attr(data-icon); /* Use an attribute for content if needed, but for Emojis we style the whole H3 */
+            background-color: #fde047; /* Gold background */
+            color: #364e7c; /* Dark text/emoji color */
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 1.4rem;
+            line-height: 1;
+            font-weight: 900;
+            box-shadow: 0 0 15px rgba(253, 224, 71, 0.4);
+        }
+        /* Override the 'h3' style to allow emojis inside to be the badge */
+        .start-point-section h3 {
+            /* Reset the default emoji position */
+            display: block; 
+            color: #fde047;
+            font-size: 1.8rem; /* Make the number/icon larger within the H3 */
+        }
+        
+        /* The actual step text that follows the number/icon */
+        .start-point-section h3 span {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+
+        .start-point-section p {
+            font-size: 1.2rem; /* Slightly larger body text */
+            max-width: 100%;
+            margin-bottom: 1.8rem; /* More space between paragraphs */
+            opacity: 0.98;
+            line-height: 2; /* Increased line height for better readability (The Arabic line-height is crucial) */
+        }
+
+        .start-point-section strong {
+            font-weight: 800;
+            color: #ffcc80; /* Lighter Orange/Peach for strong emphasis */
+        }
+
+        .start-point-section .time-note {
+            background: rgba(255, 255, 255, 0.15); /* Slightly lighter transparent background */
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 4rem 0; /* More margin to separate it */
+            border-right: 5px solid #ef4444;
+            font-style: italic;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            font-size: 1.15rem;
+        }
+        
+        .start-point-section .time-note strong {
+             color: #ef4444; /* Red color for the time heading */
+        }
+        
+        .start-point-section .summary-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #a7f3d0; /* Soft green color for the conclusion */
+        }
+
         /* Footer */
-        .main-footer {
-            background-color: #2e4a86;
+        .footer {
+            background: #2e4a86;
             color: white;
             padding: 3rem 0;
             text-align: center;
         }
 
-        .footer-content {
+        .footer h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer .quote {
+            font-style: italic;
+            color: #a7f3d0;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        .social-links {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem; /* Increased gap */
+            margin-top: 2rem;
         }
 
-        .social-icons a {
+        .social-links a {
             color: white;
-            font-size: 1.5rem;
-            margin: 0 0.8rem;
-            transition: color 0.3s ease;
+            font-size: 2rem; /* Slightly larger icons */
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
-        .social-icons a:hover {
+        .social-links a:hover {
             color: #10b981;
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .comparison-grid,
+            .ai-grid,
+            .talents-grid,
+            .life-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-description {
+                padding: 2rem;
+                font-size: 1.1rem;
+            }
+            
+            /* FIX: Increased container padding for better mobile spacing */
+            .container {
+                padding: 0 2rem; 
+            }
+            
+            .start-point-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Animation Effects */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "نحو جيل يغير العالم",
+      "name": "إيقاظ المواهب الفطرية في عصر التحولات الكبرى",
+      "author": {
+        "@type": "Person",
+        "name": "فريق نحو جيل يغير العالم"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GitHub Pages",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rising-era.github.io/awaken-talents/logo.png"
+        }
+      },
+      "datePublished": "2024-09-09",
+      "dateModified": "2024-09-09",
+      "description": "دليل شامل لاكتشاف المواهب الفطرية وبناء مسار مهني وحياتي هادف في ظل التغيرات السريعة التي فرضها الذكاء الاصطناعي."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "لماذا لم يعد النموذج التقليدي للتعليم يعمل في عالم اليوم؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "النموذج التقليدي كان مصمماً لإنتاج موظفين للثورة الصناعية، ولم يعد يلبي احتياجات العالم الحديث القائمة على الإبداع والتفكير النقدي."
+        }
+      }, {
+        "@type": "Question",
+        "name": "ما هي الوظائف المهددة بالذكاء الاصطناعي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الذكاء الاصطناعي يهدد الوظائف التي تعتمد على المهام الروتينية والمتكررة مثل المحاسبة التقليدية وخدمة العملاء الأساسية، والتحليل المالي البسيط."
+        }
+      }, {
+        "@type": "Question",
+        "name": "ما هي المهارات المحمية من الذكاء الاصطناعي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الذكاء الاصطناعي لا يمكنه استبدال المهارات البشرية الفريدة مثل الإبداع، التفكير النقدي، الذكاء العاطفي، والقيادة وإلهام الآخرين."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
-    
-    <header class="main-header">
-        <div class="container navbar">
-            <a href="#" class="logo">RiseEra</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#why-us">لماذا نحن؟</a></li>
-                    <li><a href="#register">البرامج والتعليم</a></li>
-                    <li><a href="#contact">تواصل معنا</a></li>
-                </ul>
-            </nav>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">نحو جيل يغير العالم</h1>
+            <p class="hero-subtitle">إيقاظ المواهب الفطرية في عصر التحولات الكبرى</p>
+            <div class="hero-description">
+                حان الوقت لتفكيك النموذج القديم وبناء مسارك الخاص. هذا هو دليلك لاكتشاف قدراتك الحقيقية والمساهمة في المستقبل.
+            </div>
+            <a href="#three-cards-section-anchor" class="cta-button">
+                <i class="fas fa-rocket"></i>
+                ابدأ رحلتك الآن
+            </a>
         </div>
-    </header>
+    </section>
 
-    <main id="home">
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">نحو جيل يغير العالم</h1>
-                <p class="hero-subtitle">إيقاظ المواهب الفطرية لبناء مستقبل ريادي.</p>
-                <div class="hero-description">
-                    نحن نؤمن بأن كل فرد يمتلك موهبة فريدة. مهمتنا هي توفير الأدوات والمعرفة اللازمة لتحويل هذه المواهب إلى قوة دافعة للتغيير والابتكار في عالم الذكاء الاصطناعي والتكنولوجيا المتقدمة.
+    <div class="main-content" id="mainContent">
+        <a id="three-cards-section-anchor"></a> <section class="three-cards-section">
+            <div class="container">
+                <div class="three-cards">
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>المشكلة</h3>
+                        <p>النموذج التقليدي للتعليم والعمل لم يعد يعمل في عالم اليوم المتسارع</p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>الحل</h3>
+                        <p>إيقاظ المواهب الفطرية والتعلم الموجه ذاتياً كبديل للنظام التقليدي</p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                        <h3>الطريق</h3>
+                        <p>إرشادك خطوة بخطوة لبناء مسار وظيفي وحياتي مستدام ومحصن ضد التغيرات السريعة والذكاء الاصطناعي.</p>
+                    </div>
+                </div> </div> </section> <section class="education-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">لماذا لم يعد التعليم التقليدي يعمل؟</h2>
+                    <p class="section-subtitle">الثورة الصناعية الرابعة (الذكاء الاصطناعي) تتطلب مهارات مختلفة تماماً عن تلك التي صُمم النظام القديم لإنتاجها.</p>
                 </div>
-                <a href="#register" class="cta-button">
-                    ابدأ رحلتك الآن
-                    <i class="fas fa-arrow-left"></i>
-                </a>
+                
+                <div class="why-not-working fade-in">
+                    <h4><i class="fas fa-exclamation-circle"></i> المشكلة الجوهرية</h4>
+                    <p>النموذج التقليدي مصمم لإنتاج موظفين (إجابات موحدة، مهارات روتينية) وليس مبدعين أو رواد أعمال (أسئلة عميقة، حلول فريدة).</p>
+                </div>
+
+                <div class="comparison-section">
+                    <h3 class="comparison-title fade-in">التعليم التقليدي مقابل التعليم المستقبلي</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-column traditional fade-in">
+                            <h4>النموذج التقليدي 💔</h4>
+                            <ul>
+                                <li>يركز على الحفظ والاسترجاع.</li>
+                                <li>تعليم موحد للجميع.</li>
+                                <li>يُقيّم الطالب بدرجات، لا بإنتاجه.</li>
+                                <li>هدف التعليم هو الوظيفة الآمنة.</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-column future fade-in">
+                            <h4>التعليم المستقبلي ✨</h4>
+                            <ul>
+                                <li>يركز على الفهم والتطبيق والإبداع.</li>
+                                <li>مسارات تعليمية مخصصة للفرد.</li>
+                                <li>يُقيّم الطالب بمشاريع ومنتجات حقيقية.</li>
+                                <li>هدف التعليم هو ريادة الأعمال وصناعة الفرص.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-golden-summary fade-in">
+                    <h3>الخلاصة الذهبية: حان وقت التغيير</h3>
+                    <p>النجاح في المستقبل يعتمد على مدى سرعة تخلصك من عقلية الموظف وتبني عقلية المبدع.</p>
+                </div>
             </div>
         </section>
 
-        <div class="main-content">
+        <section class="ai-section">
             <div class="container">
-                <section class="three-cards-section" id="why-us">
-                    <header class="section-header">
-                        <h2 class="section-title">لماذا نحن؟</h2>
-                        <p class="section-subtitle">نقدم مساراً تعليمياً متكاملاً يركز على ثلاثة محاور أساسية لمواكبة المستقبل.</p>
-                    </header>
-                    <div class="three-cards">
-                        <div class="card">
-                            <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-                            <h3>إيقاظ الموهبة</h3>
-                            <p>نستخدم أحدث الأساليب لاكتشاف وصقل نقاط القوة الفطرية لدى الأفراد، وتحويلها إلى مهارات عملية ومطلوبة. يشمل ذلك اختبارات تحديد الميول والتدريب الشخصي.</p>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon"><i class="fas fa-rocket"></i></div>
-                            <h3>ريادة الأعمال</h3>
-                            <p>تعليم مبادئ تأسيس المشاريع الصغيرة والكبيرة، وتزويد الطلاب بعقلية الابتكار وحل المشكلات العالمية المعقدة، من الفكرة حتى إطلاق المنتج.</p>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon"><i class="fas fa-brain"></i></div>
-                            <h3>التعليم المستقبلي</h3>
-                            <p>منهج يركز على الذكاء الاصطناعي، البرمجة، والتعلم الذاتي، لضمان جاهزية الجيل لسوق العمل المستقبلي. نغطي أساسيات الـ Machine Learning وعلوم البيانات.</p>
-                        </div>
-                    </div>
-                </section>
+                <div class="section-header fade-in">
+                    <h2 class="section-title">مواجهة الذكاء الاصطناعي</h2>
+                    <p class="section-subtitle">وظائف المستقبل ليست تلك التي ستبقى، بل تلك التي لا يستطيع الذكاء الاصطناعي أداءها.</p>
+                </div>
 
-                <section class="education-section" id="register">
-                    <div class="container">
-                        <header class="section-header">
-                            <h2 class="section-title">رحلتنا التعليمية</h2>
-                            <p class="section-subtitle">رحلة متدرجة وممتعة تضمن انتقالك من مرحلة الاكتشاف إلى مرحلة التنفيذ والريادة.</p>
-                        </header>
-                        <div class="education-content">
-                            <h3>مراحل البرنامج:</h3>
-                            <div class="timeline-item">
-                                <span class="timeline-dot"></span>
-                                <h4>المرحلة الأولى: الاكتشاف والتقييم</h4>
-                                <p>تقييم شامل للمهارات والميول الفطرية وتحديد مسار التطوير المناسب. مدتها 4 أسابيع.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <span class="timeline-dot"></span>
-                                <h4>المرحلة الثانية: صقل المهارات الأساسية</h4>
-                                <p>التدريب المكثف على أساسيات البرمجة، التفكير النقدي، والعمل الجماعي. مدتها 8 أسابيع.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <span class="timeline-dot"></span>
-                                <h4>المرحلة الثالثة: الإطلاق والريادة</h4>
-                                <p>بناء مشروعك الخاص وتلقي الإرشاد من الخبراء، مع التركيز على التسويق الرقمي وإدارة المنتج. مدتها 12 أسبوعاً.</p>
-                            </div>
-                            <div style="text-align: center; margin-top: 3rem;">
-                                <a href="#contact" class="cta-button">
-                                    سجل الآن للحصول على استشارة مجانية
-                                </a>
-                            </div>
-                        </div>
+                <div class="ai-grid">
+                    <div class="ai-column threatened fade-in">
+                        <h4><i class="fas fa-robot"></i> وظائف مهددة بالذكاء الاصطناعي</h4>
+                        <ul>
+                            <li>المهام الروتينية والمتكررة (إدخال البيانات).</li>
+                            <li>المحاسبة التقليدية (المهام الحسابية البسيطة).</li>
+                            <li>التحليل المالي الأولي (جمع وتلخيص البيانات).</li>
+                            <li>خدمة العملاء الأساسية (الرد على الأسئلة المتكررة).</li>
+                        </ul>
                     </div>
-                </section>
+                    <div class="ai-column protected fade-in">
+                        <h4><i class="fas fa-shield-alt"></i> وظائف محمية بالمهارات البشرية</h4>
+                        <ul>
+                            <li>الإبداع الفني والأصلي (الفنانون والمصممون).</li>
+                            <li>القيادة الاستراتيجية وإلهام الآخرين.</li>
+                            <li>التفكير النقدي المعقد وحل المشكلات غير التقليدية.</li>
+                            <li>الذكاء العاطفي والتفاعل البشري العميق (الطب النفسي).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="golden-summary ai fade-in">
+                    <h3>المعادلة المستقبلية</h3>
+                    <p><strong>الإنسان المبدع + الذكاء الاصطناعي = القوة المهنية الأقوى.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="talents-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title" style="color: #059669;">قوة المواهب الفطرية</h2>
+                    <p class="section-subtitle">لا تكتفِ بالذكاء التقليدي، فموهبتك الحقيقية تكمن في الذكاءات المتعددة.</p>
+                </div>
+
+                <div class="talents-grid">
+                    <div class="talents-column classical fade-in">
+                        <h4>الذكاءات التقليدية 🧠</h4>
+                        <ul>
+                            <li><i class="fas fa-calculator"></i> الذكاء المنطقي (الرياضيات والمنطق).</li>
+                            <li><i class="fas fa-language"></i> الذكاء اللغوي (الكتابة والتعبير).</li>
+                            <li><i class="fas fa-chart-line"></i> هذه المهارات سهلة الأتمتة بالذكاء الاصطناعي.</li>
+                        </ul>
+                    </div>
+                    <div class="talents-column multiple fade-in">
+                        <h4>الذكاءات المتعددة الفطرية ⭐</h4>
+                        <ul>
+                            <li><i class="fas fa-users"></i> الذكاء الاجتماعي (التأثير والقيادة).</li>
+                            <li><i class="fas fa-hands-helping"></i> الذكاء الوجودي (الغاية والمعنى).</li>
+                            <li><i class="fas fa-palette"></i> الذكاء البصري والمكاني (التصميم والفنون).</li>
+                            <li><i class="fas fa-bolt"></i> الذكاء الحركي/الجسدي (الرياضة، الميكانيكا).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sports-example fade-in">
+                    <h4><i class="fas fa-medal"></i> مثال رياضي: الموهبة الفطرية لا تُدرّس</h4>
+                    <p>لا يمكنك تعليم شخص أن يكون ليونيل ميسي. يمكنك تدريبه، ولكن الإحساس الكامن بالكرة، والذكاء الحركي العالي، هي مواهب فطرية يجب إيقاظها.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="start-point-section">
+            <div class="container">
+                <h2>نقطة الانطلاق: خريطة طريقك لـ (المهنة + الحياة)</h2>
+                <div class="fade-in" style="margin-top: 3rem;">
+                    <h3 data-icon="1️⃣">اكتشف مواهبك الفطرية</h3>
+                    <p>هذه هي الخطوة الأهم. تحديد المهارات التي تملكها بالفطرة (الذكاء الاجتماعي، الذكاء البصري، إلخ) والتي لا يمكن للذكاء الاصطناعي تقليدها. هذه المواهب هي **قوتك الخارقة**.</p>
+                </div>
                 
-                <section class="three-cards-section" id="contact">
-                    <header class="section-header">
-                        <h2 class="section-title">تواصل معنا</h2>
-                        <p class="section-subtitle">نحن جاهزون للإجابة على جميع استفساراتك.</p>
-                    </header>
-                    <div class="card" style="max-width: 600px; margin: 0 auto;">
-                        <div class="card-icon" style="background: #4a69ad;"><i class="fas fa-envelope"></i></div>
-                        <h3>الاستفسارات والردود</h3>
-                        <p>يمكنك التواصل معنا عبر البريد الإلكتروني وسنرد عليك خلال 24 ساعة عمل.</p>
-                        <a href="mailto:info@riseera.com" style="display: block; margin-top: 1rem; color: #4a69ad; font-weight: 600;">info@riseera.com</a>
+                <div class="fade-in">
+                    <h3 data-icon="2️⃣">التعلم الذاتي القائم على الشغف</h3>
+                    <p>بمجرد تحديد موهبتك، ابدأ في **التعلم العميق والموجه ذاتياً** في المجال الذي يتوافق مع شغفك وموهبتك. لا تنتظر المناهج البالية؛ العالم هو جامعتك.</p>
+                </div>
+                
+                <div class="fade-in">
+                    <h3 data-icon="3️⃣">ابنِ مسارك الريادي</h3>
+                    <p>الهدف ليس الوظيفة، بل **خلق قيمة** وحل مشكلة. ابدأ مشروعك الريادي، ولو صغيراً. التعرض للتحديات هو أفضل معلم.</p>
+                </div>
+                
+                <div class="time-note fade-in">
+                    <strong>ملاحظة هامة:</strong> العملية ليست سريعة، لكنها مسار حياة يستحق. ابدأ اليوم؛ كل يوم تأخير هو فرصة ضائعة في بناء حياتك الخاصة.
+                </div>
+                
+                <div class="summary-box fade-in">
+                    "المستقبل ليس لمتعلمي الإجابات، بل لسائلي الأسئلة وصانعي الأدوات."
+                </div>
+            </div>
+        </section>
+
+        <section class="life-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">حياتك بين يديك</h2>
+                    <p class="section-subtitle">القرار قرارك: هل تختار المسار الآمن والمهدد، أم المسار الصعب والمليء بالإمكانيات؟</p>
+                </div>
+
+                <div class="life-grid">
+                    <div class="life-column negative fade-in">
+                        <h4><i class="fas fa-minus-circle"></i> خطر الوظيفة الآمنة</h4>
+                        <ul>
+                            <li>الاعتماد الكلي على مصدر دخل واحد.</li>
+                            <li>سقف زجاجي للنمو المهني والشخصي.</li>
+                            <li>التعرض لتهديد الأتمتة وفقدان الوظيفة المفاجئ.</li>
+                            <li>غياب الشغف والعمل بلا هدف عميق.</li>
+                        </ul>
                     </div>
-                </section>
+                    <div class="life-column positive fade-in">
+                        <h4><i class="fas fa-plus-circle"></i> قوة المسار المستقل</h4>
+                        <ul>
+                            <li>تعدد مصادر الدخل والأمان المالي الحقيقي.</li>
+                            <li>النمو غير المحدود المرتبط بجهدك وإبداعك.</li>
+                            <li>الحصانة من الأتمتة بالتركيز على المهارات البشرية.</li>
+                            <li>إيجاد الغاية والشغف في كل ما تقوم به.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="success-message fade-in">
+                    "التعليم الذاتي + الموهبة الفطرية = الحرية المهنية والحياتية."
+                </div>
             </div>
-        </div>
-    </main>
-    
-    <footer class="main-footer">
-        <div class="container footer-content">
-            <p>&copy; 2025 RiseEra. جميع الحقوق محفوظة.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+        </section>
+
+        <section class="final-section">
+            <div class="container">
+                <h2 class="fade-in">استيقظ! مستقبلك يبدأ الآن</h2>
+                <p class="subtitle fade-in">انضم إلينا في هذه الرحلة نحو التغيير. لم يعد هناك وقت نضيعه في تكرار الماضي.</p>
+                
+                <div class="community-grid">
+                    <div class="community-item fade-in">
+                        <div class="community-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4>موارد مجانية</h4>
+                        <p>ابدأ بتعلم المهارات المستقبلية الأساسية من مصادر موثوقة عالمياً.</p>
+                    </div>
+                    <div class="community-item fade-in">
+                        <div class="community-icon"><i class="fas fa-users"></i></div>
+                        <h4>مجتمع الداعمين</h4>
+                        <p>تواصل مع جيل من المبدعين ورياديي الأعمال الذين يشاركونك الرؤية.</p>
+                    </div>
+                    <div class="community-item fade-in">
+                        <div class="community-icon"><i class="fas fa-map-pin"></i></div>
+                        <h4>خارطة الطريق</h4>
+                        <p>احصل على دليل مفصل لتحديد مواهبك وبناء مسارك خطوة بخطوة.</p>
+                    </div>
+                </div>
+
+                <a href="#" class="final-cta-button fade-in">
+                    <i class="fas fa-angle-left"></i>
+                    انضم للجيل الذي يغير العالم
+                </a>
+
+                <div class="quote-section fade-in">
+                    المستقبل لا ينتظر الشهادات، بل ينتظر الموهوبين والشجعان.
+                </div>
             </div>
+        </section>
+    </div> <footer class="footer">
+        <div class="container">
+            <h3>نحو جيل يغير العالم</h3>
+            <p>رسالتنا هي إيقاظ الجيل القادم ليخلقوا مستقبلاً قائماً على المواهب والريادة.</p>
+            <div class="social-links">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter/X"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="quote">صمم حياتك الخاصة، قبل أن يصممها لك شخص آخر.</p>
         </div>
     </footer>
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faders = document.querySelectorAll('.fade-in');
+
+            const appearOptions = {
+                threshold: 0,
+                rootMargin: "0px 0px -100px 0px" // Start appearing 100px before reaching the viewport bottom
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+
 </body>
 </html>
